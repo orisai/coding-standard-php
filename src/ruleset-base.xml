@@ -1,0 +1,682 @@
+<ruleset
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="./../vendor/squizlabs/php_codesniffer/phpcs.xsd">
+
+	<!-- Configure ruleset -->
+	<config name="installed_paths" value="./../../slevomat/coding-standard/"/>
+	<arg value="p"/>
+	<arg value="s"/>
+	<arg name="colors"/>
+	<arg name="parallel" value="1"/>
+	<arg name="tab-width" value="4"/>
+	<arg name="encoding" value="utf-8"/>
+	<arg name="extensions" value="php"/>
+
+	<!--
+	 	Arrays
+	-->
+
+	<rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
+	<rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation"/>
+	<rule ref="SlevomatCodingStandard.Arrays.MultiLineArrayEndBracketPlacement"/>
+	<rule ref="Generic.Arrays.ArrayIndent">
+		<!-- Multiline items don't work properly -->
+		<exclude name="Generic.Arrays.ArrayIndent.CloseBraceNotNewLine"/>
+	</rule>
+	<rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
+	<rule ref="Squiz.Arrays.ArrayDeclaration">
+		<!-- Multiple items key => value alignment just looks bad -->
+		<exclude name="Squiz.Arrays.ArrayDeclaration.KeyNotAligned"/>
+		<exclude name="Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned"/>
+		<exclude name="Squiz.Arrays.ArrayDeclaration.ValueNotAligned"/>
+		<!-- Don't enforce items count per line -->
+		<exclude name="Squiz.Arrays.ArrayDeclaration.FirstIndexNoNewline"/>
+		<exclude name="Squiz.Arrays.ArrayDeclaration.FirstValueNoNewline"/>
+		<exclude name="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed"/>
+		<exclude name="Squiz.Arrays.ArrayDeclaration.MultiLineNotAllowed"/>
+		<exclude name="Squiz.Arrays.ArrayDeclaration.CloseBraceNewLine"/>
+		<exclude name="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned"/>
+		<exclude name="Squiz.Arrays.ArrayDeclaration.IndexNoNewline"/>
+		<exclude name="Squiz.Arrays.ArrayDeclaration.ValueNoNewline"/>
+		<!-- Comma is enforced by SlevomatCodingStandard.Arrays.TrailingArrayComma -->
+		<exclude name="Squiz.Arrays.ArrayDeclaration.NoComma"/>
+		<exclude name="Squiz.Arrays.ArrayDeclaration.NoCommaAfterLast"/>
+	</rule>
+
+	<!--
+	 	Classes
+	-->
+
+	<rule ref="Generic.Classes.DuplicateClassName"/>
+	<rule ref="PSR1.Classes.ClassDeclaration"/>
+	<rule ref="PEAR.Classes.ClassDeclaration"/>
+	<rule ref="Squiz.Classes.ClassFileName"/>
+	<rule ref="Squiz.Classes.SelfMemberReference"/>
+	<rule ref="Squiz.Classes.ValidClassName"/>
+	<rule ref="PSR2.Classes.PropertyDeclaration"/>
+	<rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility"/>
+	<rule ref="SlevomatCodingStandard.Classes.ConstantSpacing">
+		<properties>
+			<property name="minLinesCountBeforeWithComment" value="1"/>
+			<property name="maxLinesCountBeforeWithComment" value="1"/>
+			<property name="minLinesCountBeforeWithoutComment" value="0"/>
+			<property name="maxLinesCountBeforeWithoutComment" value="1"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Classes.ClassStructure">
+		<properties>
+			<property name="groups" type="array">
+				<element value="uses"/>
+				<element value="constants"/>
+				<element value="properties"/>
+				<element value="constructor"/>
+				<element value="static constructors"/>
+				<element value="methods"/>
+				<element value="destructor"/>
+				<element value="magic methods"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Classes.DisallowMultiPropertyDefinition"/>
+	<rule ref="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants"/>
+	<rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
+		<properties>
+			<property name="linesCountAfterOpeningBrace" value="1"/>
+			<property name="linesCountBeforeClosingBrace" value="1"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Classes.MethodSpacing"/>
+	<rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
+	<rule ref="SlevomatCodingStandard.Classes.PropertySpacing">
+		<properties>
+			<property name="minLinesCountBeforeWithComment" value="1"/>
+			<property name="maxLinesCountBeforeWithComment" value="1"/>
+			<property name="minLinesCountBeforeWithoutComment" value="0"/>
+			<property name="maxLinesCountBeforeWithoutComment" value="1"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Classes.RequireMultiLineMethodSignature">
+		<properties>
+			<property name="minLineLength" value="121"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Classes.RequireSingleLineMethodSignature">
+		<properties>
+			<property name="maxLineLength" value="79"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming"/>
+	<rule ref="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming"/>
+	<rule ref="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming"/>
+	<rule ref="SlevomatCodingStandard.Classes.SuperfluousTraitNaming"/>
+	<rule ref="SlevomatCodingStandard.Classes.TraitUseDeclaration"/>
+	<rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
+		<properties>
+			<property name="linesCountBeforeFirstUse" value="1"/>
+			<property name="linesCountBetweenUses" value="0"/>
+			<property name="linesCountAfterLastUse" value="1"/>
+			<!-- Match with EmptyLinesAroundClassBraces -->
+			<property name="linesCountBeforeFirstUseWhenFirstInClass" value="1"/>
+			<property name="linesCountAfterLastUseWhenLastInClass" value="1"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Classes.UselessLateStaticBinding"/>
+
+	<!--
+	 	Comments
+	-->
+
+	<rule ref="Generic.Commenting.DocComment">
+		<exclude name="Generic.Commenting.DocComment.ContentAfterOpen"/>
+		<exclude name="Generic.Commenting.DocComment.ContentBeforeClose"/>
+		<exclude name="Generic.Commenting.DocComment.LongNotCapital"/>
+		<exclude name="Generic.Commenting.DocComment.MissingShort"/>
+		<exclude name="Generic.Commenting.DocComment.NonParamGroup"/>
+		<exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
+		<exclude name="Generic.Commenting.DocComment.SpacingBeforeTags"/>
+		<exclude name="Generic.Commenting.DocComment.TagsNotGrouped"/>
+		<exclude name="Generic.Commenting.DocComment.TagValueIndent"/>
+	</rule>
+	<rule ref="PEAR.Commenting.InlineComment"/>
+	<rule ref="Squiz.Commenting.DocCommentAlignment">
+		<!-- Doctrine have compound annotations support, space after star is valid -->
+		<exclude name="Squiz.Commenting.DocCommentAlignment.SpaceAfterStar"/>
+	</rule>
+	<rule ref="Squiz.Commenting.EmptyCatchComment"/>
+	<rule ref="Squiz.Commenting.FunctionComment">
+		<!-- Thrown error should be self-describing, comment not needed -->
+		<exclude name="Squiz.Commenting.FunctionComment.EmptyThrows"/>
+		<exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop"/>
+		<exclude name="Squiz.Commenting.FunctionComment.ThrowsNotCapital"/>
+		<!-- Supports only built-in types of given php version and is also checked by PHPStan -->
+		<exclude name="Squiz.Commenting.FunctionComment.IncorrectTypeHint"/>
+		<exclude name="Squiz.Commenting.FunctionComment.InvalidReturn"/>
+		<exclude name="Squiz.Commenting.FunctionComment.InvalidReturnNotVoid"/>
+		<!-- Don't force int=>integer, bool=>boolean -->
+		<exclude name="Squiz.Commenting.FunctionComment.IncorrectParamVarName"/>
+		<!-- Comments are not required -->
+		<exclude name="Squiz.Commenting.FunctionComment.Missing"/>
+		<exclude name="Squiz.Commenting.FunctionComment.MissingReturn"/>
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"/>
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag"/>
+		<!-- Comments support complex types while php not, mismatch should be checked by static analysis (e.g. PHPStan) -->
+		<exclude name="Squiz.Commenting.FunctionComment.ParamNameNoMatch"/>
+		<!-- Comments don't have to be sentences -->
+		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
+		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentNotCapital"/>
+		<!-- Superseded by SlevomatCodingStandard.TypeHints.ParameterTypeHint -->
+		<exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing"/>
+		<exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing"/>
+		<!-- Buggy with annotated and native types mix, superseded by PHPStan -->
+		<exclude name="Squiz.Commenting.FunctionComment.InvalidTypeHint"/>
+		<!-- Multiline alignments just looks bad -->
+		<exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamName"/>
+		<exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"/>
+		<!-- Reports standalone comments not related to a function -->
+		<exclude name="Squiz.Commenting.FunctionComment.WrongStyle"/>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.ExtraParamComment">
+		<message>Function has more @param annotations than params</message>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.DuplicateReturn">
+		<message>Function must have only one @return annotation</message>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.InvalidNoReturn">
+		<message>Function has no return statement, but annotation @return is present</message>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.InvalidThrows">
+		<message>'Exception type missing for @throws tag in function comment'</message>
+	</rule>
+	<rule ref="Squiz.Commenting.VariableComment">
+		<exclude name="Squiz.Commenting.VariableComment.TagNotAllowed"/>
+		<!-- Don't force int=>integer, bool=>boolean -->
+		<exclude name="Squiz.Commenting.VariableComment.IncorrectVarType"/>
+		<!-- Property may have native type -->
+		<exclude name="Squiz.Commenting.VariableComment.Missing"/>
+		<exclude name="Squiz.Commenting.VariableComment.MissingVar"/>
+	</rule>
+
+	<rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing"/>
+	<rule ref="SlevomatCodingStandard.Commenting.EmptyComment"/>
+	<rule ref="SlevomatCodingStandard.Commenting.ForbiddenAnnotations">
+		<properties>
+			<property name="forbiddenAnnotations" type="array">
+				<element value="@author"/>
+				<element value="@copyright"/>
+				<element value="@created"/>
+				<element value="@license"/>
+				<element value="@package"/>
+				<element value="@since"/>
+				<element value="@subpackage"/>
+				<element value="@version"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Commenting.ForbiddenComments">
+		<properties>
+			<property name="forbiddenCommentPatterns" type="array">
+				<element value="~^(?:(?!private|protected|static)\S+ )?(?:con|de)structor\.\z~i"/>
+				<element value="~^Created by \S+\.\z~i"/>
+				<element value="~^\S+ [gs]etter\.\z~i"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration"/>
+	<rule ref="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment"/>
+	<rule ref="SlevomatCodingStandard.Commenting.UselessFunctionDocComment">
+		<properties>
+			<property name="traversableTypeHints" type="array">
+				<element value="Traversable"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Commenting.UselessInheritDocComment"/>
+
+	<!--
+		Code analysis
+	-->
+
+	<rule ref="Generic.CodeAnalysis.EmptyStatement">
+		<!-- Empty catch statements are allowed -->
+		<exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedCatch"/>
+	</rule>
+	<rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+	<rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
+	<rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
+
+	<!--
+	 	Control structures
+	-->
+
+	<rule ref="Generic.ControlStructures.InlineControlStructure"/>
+	<rule ref="PSR2.ControlStructures.SwitchDeclaration">
+		<!-- Checked by more Generic.WhiteSpace.ScopeIndent.Incorrect -->
+		<exclude name="PSR2.ControlStructures.SwitchDeclaration.caseIndent"/>
+		<exclude name="PSR2.ControlStructures.SwitchDeclaration.defaultIndent"/>
+	</rule>
+	<rule ref="PSR2.ControlStructures.ElseIfDeclaration"/>
+	<rule ref="PSR2.ControlStructures.ElseIfDeclaration.NotAllowed">
+		<type>error</type>
+	</rule>
+	<rule ref="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing">
+		<exclude name="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing.IncorrectLinesCountBeforeControlStructure"/>
+		<exclude name="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing.IncorrectLinesCountBeforeFirstControlStructure"/>
+		<properties>
+			<property name="linesCountAfterControlStructure" value="1"/>
+			<property name="linesCountAfterLastControlStructure" value="0"/>
+			<property name="tokensToCheck" type="array">
+				<element value="T_IF"/>
+				<element value="T_DO"/>
+				<element value="T_WHILE"/>
+				<element value="T_FOR"/>
+				<element value="T_FOREACH"/>
+				<element value="T_SWITCH"/>
+				<element value="T_TRY"/>
+				<element value="T_DEFAULT"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing">
+		<properties>
+			<property name="allowSingleLineYieldStacking" value="true"/>
+			<property name="linesCountBeforeControlStructure" value="1"/>
+			<property name="linesCountBeforeFirstControlStructure" value="0"/>
+			<property name="linesCountBeforeWhenFirstInCaseOrDefault" value="null"/>
+			<property name="linesCountAfterControlStructure" value="1"/>
+			<property name="linesCountAfterLastControlStructure" value="0"/>
+			<property name="linesCountAfterWhenLastInCaseOrDefault" value="null"/>
+			<property name="linesCountAfterWhenLastInLastCaseOrDefault" value="null"/>
+			<property name="tokensToCheck" type="array">
+				<element value="T_GOTO"/>
+				<element value="T_BREAK"/>
+				<element value="T_CONTINUE"/>
+				<element value="T_RETURN"/>
+				<element value="T_THROW"/>
+				<element value="T_YIELD"/>
+				<element value="T_YIELD_FROM"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.ControlStructures.DisallowContinueWithoutIntegerOperandInSwitch"/>
+	<rule ref="SlevomatCodingStandard.ControlStructures.DisallowShortTernaryOperator">
+		<properties>
+			<property name="fixable" value="false"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
+	<rule ref="SlevomatCodingStandard.ControlStructures.LanguageConstructWithParentheses"/>
+	<rule ref="SlevomatCodingStandard.ControlStructures.NewWithParentheses"/>
+	<rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator"/>
+	<rule ref="SlevomatCodingStandard.ControlStructures.RequireTernaryOperator"/>
+	<rule ref="SlevomatCodingStandard.ControlStructures.RequireMultiLineTernaryOperator">
+		<properties>
+			<property name="lineLengthLimit" value="121"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.ControlStructures.RequireMultiLineCondition">
+		<properties>
+			<property name="minLineLength" value="121"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.ControlStructures.RequireSingleLineCondition">
+		<properties>
+			<property name="maxLineLength" value="79"/>
+			<property name="alwaysForSimpleConditions" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.ControlStructures.UselessIfConditionWithReturn"/>
+	<rule ref="SlevomatCodingStandard.ControlStructures.UselessTernaryOperator"/>
+
+	<!--
+		Exceptions
+	-->
+
+	<rule ref="SlevomatCodingStandard.Exceptions.DeadCatch"/>
+	<rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly"/>
+
+	<!--
+	 	Files
+	-->
+
+	<rule ref="Generic.Files.ByteOrderMark"/>
+	<rule ref="Generic.Files.InlineHTML"/>
+	<rule ref="Generic.Files.LineEndings">
+		<properties>
+			<property name="eolChar" value="\n"/>
+		</properties>
+	</rule>
+	<rule ref="PSR1.Files.SideEffects"/>
+	<rule ref="PSR2.Files.ClosingTag"/>
+	<rule ref="PSR2.Files.EndFileNewline"/>
+
+	<!--
+		Formatting
+	-->
+
+	<rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+	<rule ref="Generic.Formatting.SpaceAfterCast"/>
+	<rule ref="Generic.Formatting.SpaceAfterNot">
+		<properties>
+			<property name="spacing" value="0"/>
+			<property name="ignoreNewlines" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="PEAR.Formatting.MultiLineAssignment"/>
+
+	<!--
+	 	Functions
+	-->
+
+	<rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing">
+		<properties>
+			<property name="equalsSpacing" value="1"/>
+		</properties>
+	</rule>
+	<rule ref="Squiz.Functions.MultiLineFunctionDeclaration">
+		<!-- Conflicts with OpeningFunctionBraceBsdAllman -->
+		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration.NewlineBeforeOpenBrace"/>
+		<!-- Conflicts with return typehints with no space before colon in anonymous functions -->
+		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration.SpaceAfterBracket"/>
+	</rule>
+	<rule ref="Squiz.Functions.GlobalFunction"/>
+	<rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+	<rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
+	<rule ref="SlevomatCodingStandard.Functions.StaticClosure"/>
+	<rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure"/>
+	<rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue"/>
+	<rule ref="SlevomatCodingStandard.Functions.StrictCall"/>
+
+	<!--
+		Methods
+	-->
+
+	<rule ref="PSR2.Methods.FunctionCallSignature">
+		<!-- Space after closing bracket should depend on where is function called -->
+		<exclude name="PSR2.Methods.FunctionCallSignature.SpaceAfterCloseBracket"/>
+	</rule>
+	<rule ref="PSR2.Methods.MethodDeclaration"/>
+
+	<!--
+	 	Namespaces
+	-->
+
+	<rule ref="PSR2.Namespaces.UseDeclaration"/>
+	<rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses">
+		<properties>
+			<property name="psr12Compatible" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
+	<rule ref="SlevomatCodingStandard.Namespaces.MultipleUsesPerLine"/>
+	<rule ref="SlevomatCodingStandard.Namespaces.NamespaceDeclaration"/>
+	<rule ref="SlevomatCodingStandard.Namespaces.NamespaceSpacing">
+		<properties>
+			<property name="linesCountBeforeNamespace" value="1"/>
+			<property name="linesCountAfterNamespace" value="1"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Namespaces.UseSpacing">
+		<properties>
+			<property name="linesCountBeforeFirstUse" value="1"/>
+			<property name="linesCountAfterLastUse" value="1"/>
+			<property name="linesCountBetweenUseTypes" value="0"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
+		<properties>
+			<property name="searchAnnotations" value="true"/>
+			<property name="allowPartialUses" value="true"/>
+			<property name="allowFallbackGlobalConstants" value="false"/>
+			<property name="allowFallbackGlobalFunctions" value="false"/>
+			<property name="allowFullyQualifiedExceptions" value="false"/>
+			<property name="allowFullyQualifiedGlobalClasses" value="false"/>
+			<property name="allowFullyQualifiedGlobalConstants" value="false"/>
+			<property name="allowFullyQualifiedGlobalFunctions" value="false"/>
+			<property name="allowFullyQualifiedNameForCollidingClasses" value="true"/>
+			<property name="allowFullyQualifiedNameForCollidingConstants" value="true"/>
+			<property name="allowFullyQualifiedNameForCollidingFunctions" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Namespaces.RequireOneNamespaceInFile"/>
+	<rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"/>
+	<rule ref="SlevomatCodingStandard.Namespaces.UseFromSameNamespace"/>
+	<rule ref="SlevomatCodingStandard.Namespaces.UselessAlias"/>
+	<rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
+		<properties>
+			<property name="searchAnnotations" value="true"/>
+			<property name="ignoredAnnotationNames" type="array">
+				<element value="@testCase"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!--
+	 	Naming conventions
+	-->
+
+	<rule ref="Generic.NamingConventions.ConstructorName"/>
+	<rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+	<rule ref="Generic.NamingConventions.CamelCapsFunctionName">
+		<properties>
+			<property name="strict" value="false"/>
+		</properties>
+	</rule>
+
+	<!--
+		Operators
+	-->
+
+	<rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators"/>
+	<rule ref="Squiz.Operators.IncrementDecrementUsage">
+		<exclude name="Squiz.Operators.IncrementDecrementUsage.NoBrackets"/>
+	</rule>
+	<rule ref="Squiz.Operators.ValidLogicalOperators"/>
+	<rule ref="SlevomatCodingStandard.Operators.NegationOperatorSpacing"/>
+	<rule ref="SlevomatCodingStandard.Operators.SpreadOperatorSpacing"/>
+	<rule ref="SlevomatCodingStandard.Operators.RequireCombinedAssignmentOperator"/>
+
+
+	<!--
+		PHP
+	-->
+
+	<rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
+	<rule ref="Generic.PHP.DisallowShortOpenTag"/>
+	<rule ref="Squiz.PHP.GlobalKeyword"/>
+	<rule ref="Squiz.PHP.NonExecutableCode"/>
+	<rule ref="SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall"/>
+	<rule ref="SlevomatCodingStandard.PHP.ForbiddenClasses">
+		<properties>
+			<property name="forbiddenClasses" type="array">
+				<element key="\DateTime" value="\DateTimeImmutable"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="Generic.PHP.LowerCaseConstant"/>
+	<rule ref="Generic.PHP.LowerCaseKeyword"/>
+	<rule ref="Generic.PHP.LowerCaseType"/>
+	<rule ref="Squiz.PHP.InnerFunctions"/>
+	<rule ref="Squiz.PHP.LowercasePHPFunctions"/>
+	<rule ref="Generic.PHP.DeprecatedFunctions"/>
+	<rule ref="Generic.PHP.ForbiddenFunctions">
+		<properties>
+			<property name="forbiddenFunctions" type="array">
+				<element key="chop" value="rtrim"/>
+				<element key="close" value="closedir"/>
+				<element key="compact" value="null"/>
+				<element key="create_function" value="null"/>
+				<element key="delete" value="unset"/>
+				<element key="die" value="exit"/>
+				<element key="doubleval" value="floatval"/>
+				<element key="eval" value="null"/>
+				<element key="extract" value="null"/>
+				<element key="fputs" value="fwrite"/>
+				<element key="ini_alter" value="ini_set"/>
+				<element key="is_double" value="is_float"/>
+				<element key="is_integer" value="is_int"/>
+				<element key="is_long" value="is_int"/>
+				<element key="is_null" value="null"/>
+				<element key="is_real" value="is_float"/>
+				<element key="is_writeable" value="is_writable"/>
+				<element key="join" value="implode"/>
+				<element key="key_exists" value="array_key_exists"/>
+				<element key="pos" value="current"/>
+				<element key="print" value="echo"/>
+				<element key="show_source" value="highlight_file"/>
+				<element key="sizeof" value="count"/>
+				<element key="strchr" value="strstr"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.PHP.OptimizedFunctionsWithoutUnpacking"/>
+	<rule ref="SlevomatCodingStandard.PHP.RequireNowdoc"/>
+	<rule ref="SlevomatCodingStandard.PHP.ReferenceSpacing"/>
+	<rule ref="SlevomatCodingStandard.PHP.RequireExplicitAssertion"/>
+	<rule ref="SlevomatCodingStandard.PHP.ShortList"/>
+	<rule ref="SlevomatCodingStandard.PHP.TypeCast"/>
+	<rule ref="SlevomatCodingStandard.PHP.UselessParentheses">
+		<properties>
+			<property name="ignoreComplexTernaryConditions" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
+
+	<!--
+		Scope
+	-->
+
+	<rule ref="Squiz.Scope.MethodScope"/>
+	<rule ref="Squiz.Scope.StaticThisUsage"/>
+
+	<!--
+		Strings
+	-->
+
+	<rule ref="Squiz.Strings.DoubleQuoteUsage"/>
+	<rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar">
+		<message>Variable "%s" not allowed in double quoted string; use sprintf() instead</message>
+	</rule>
+	<rule ref="Squiz.Strings.ConcatenationSpacing">
+		<properties>
+			<property name="ignoreNewlines" value="true"/>
+			<property name="spacing" value="1"/>
+		</properties>
+	</rule>
+	<rule ref="Squiz.Strings.EchoedStrings"/>
+	<rule ref="Generic.Strings.UnnecessaryStringConcat">
+		<properties>
+			<property name="allowMultiline" value="true"/>
+		</properties>
+	</rule>
+
+	<!--
+	 	Typehints
+	-->
+
+	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+		<properties>
+			<property name="newlinesCountBetweenOpenTagAndDeclare" value="0"/>
+			<property name="spacesCountAroundEqualsSign" value="1"/>
+			<property name="newlinesCountAfterDeclare" value="2"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax">
+		<properties>
+			<property name="traversableTypeHints" type="array">
+				<element value="Traversable"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
+	<rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"/>
+	<rule ref="SlevomatCodingStandard.TypeHints.NullTypeHintOnLastPosition"/>
+	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"/>
+	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
+		<properties>
+			<property name="spacesCountBeforeColon" value="0"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
+	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
+		<properties>
+			<property name="traversableTypeHints" type="array">
+				<element value="Traversable"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
+		<properties>
+			<property name="traversableTypeHints" type="array">
+				<element value="Traversable"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
+		<properties>
+			<property name="traversableTypeHints" type="array">
+				<element value="Traversable"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!--
+		Variables
+	-->
+
+	<rule ref="SlevomatCodingStandard.Variables.DisallowSuperGlobalVariable"/>
+	<rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
+	<rule ref="SlevomatCodingStandard.Variables.UnusedVariable">
+		<properties>
+			<property name="ignoreUnusedValuesWhenOnlyKeysAreUsedInForeach" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
+
+	<!--
+	 	Whitespace
+	-->
+
+	<rule ref="Generic.WhiteSpace.ArbitraryParenthesesSpacing">
+		<properties>
+			<property name="ignoreNewlines" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.CastSpacing"/>
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
+	<rule ref="PEAR.WhiteSpace.ObjectOperatorIndent"/>
+	<rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing">
+		<properties>
+			<property name="ignoreNewlines" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.OperatorSpacing">
+		<properties>
+			<property name="ignoreNewlines" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
+	<rule ref="Squiz.WhiteSpace.FunctionSpacing">
+		<properties>
+			<property name="spacing" value="1"/>
+		</properties>
+		<!-- Does not allow PHPUnit ignore comments -->
+		<exclude name="Squiz.WhiteSpace.FunctionSpacing.After"/>
+	</rule>
+	<rule ref="Generic.WhiteSpace.LanguageConstructSpacing"/>
+	<rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
+	<rule ref="Squiz.WhiteSpace.MemberVarSpacing"/>
+	<rule ref="Squiz.WhiteSpace.ScopeClosingBrace"/>
+	<rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
+	<rule ref="Generic.WhiteSpace.ScopeIndent">
+		<properties>
+			<property name="tabIndent" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
+	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
+		<properties>
+			<property name="ignoreBlankLines" value="false"/>
+		</properties>
+	</rule>
+
+</ruleset>
