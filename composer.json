@@ -1,0 +1,34 @@
+{
+	"name": "orisai/coding-standard",
+	"description": "Strict PHP coding standard",
+	"keywords": [
+		"orisai",
+		"phpcs",
+		"standards",
+		"coding standard"
+	],
+	"type": "library",
+	"license": "MPL-2.0",
+	"homepage": "https://github.com/orisai/coding-standard-php",
+	"authors": [
+		{
+			"name": "Marek Bartoš",
+			"homepage": "https://github.com/mabar"
+		}
+	],
+	"require": {
+		"php": ">=7.1.0",
+		"slevomat/coding-standard": "^6.4.0",
+		"squizlabs/php_codesniffer": "^3.5.0"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"config": {
+		"sort-packages": true
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		}
+	}
+}

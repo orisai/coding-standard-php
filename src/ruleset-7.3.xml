@@ -1,0 +1,14 @@
+<ruleset
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="./../vendor/squizlabs/php_codesniffer/phpcs.xsd">
+	<!-- Configure ruleset -->
+	<config name="php_version" value="70300"/>
+
+	<!-- Import base -->
+	<rule ref="./ruleset-base.xml"/>
+
+	<!-- Version-specific rules -->
+	<rule ref="SlevomatCodingStandard.Functions.DisallowArrowFunction"/>
+	<rule ref="SlevomatCodingStandard.Functions.TrailingCommaInCall"/>
+	<rule ref="SlevomatCodingStandard.Numbers.DisallowNumericLiteralSeparator"/>
+</ruleset>
