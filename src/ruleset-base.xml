@@ -484,13 +484,6 @@
 	<rule ref="Squiz.PHP.GlobalKeyword"/>
 	<rule ref="Squiz.PHP.NonExecutableCode"/>
 	<rule ref="SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall"/>
-	<rule ref="SlevomatCodingStandard.PHP.ForbiddenClasses">
-		<properties>
-			<property name="forbiddenClasses" type="array">
-				<element key="\DateTime" value="\DateTimeImmutable"/>
-			</property>
-		</properties>
-	</rule>
 	<rule ref="Generic.PHP.LowerCaseConstant"/>
 	<rule ref="Generic.PHP.LowerCaseKeyword"/>
 	<rule ref="Generic.PHP.LowerCaseType"/>
@@ -502,13 +495,9 @@
 			<property name="forbiddenFunctions" type="array">
 				<element key="chop" value="rtrim"/>
 				<element key="close" value="closedir"/>
-				<element key="compact" value="null"/>
-				<element key="create_function" value="null"/>
 				<element key="delete" value="unset"/>
 				<element key="die" value="exit"/>
 				<element key="doubleval" value="floatval"/>
-				<element key="eval" value="null"/>
-				<element key="extract" value="null"/>
 				<element key="fputs" value="fwrite"/>
 				<element key="ini_alter" value="ini_set"/>
 				<element key="is_double" value="is_float"/>
@@ -622,7 +611,6 @@
 		Variables
 	-->
 
-	<rule ref="SlevomatCodingStandard.Variables.DisallowSuperGlobalVariable"/>
 	<rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
 	<rule ref="SlevomatCodingStandard.Variables.UnusedVariable">
 		<properties>
