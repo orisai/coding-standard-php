@@ -676,5 +676,11 @@
 			<property name="ignoreBlankLines" value="false"/>
 		</properties>
 	</rule>
+	<rule ref="SlevomatCodingStandard.Whitespaces.DuplicateSpaces">
+		<properties>
+			<property name="ignoreSpacesInAnnotation" value="true"/>
+			<property name="ignoreSpacesInComment" value="true"/>
+		</properties>
+	</rule>
 
 </ruleset>
