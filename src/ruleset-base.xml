@@ -101,7 +101,7 @@
 	</rule>
 	<rule ref="SlevomatCodingStandard.Classes.RequireSingleLineMethodSignature">
 		<properties>
-			<property name="maxLineLength" value="79"/>
+			<property name="maxLineLength" value="80"/>
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming"/>
@@ -320,7 +320,7 @@
 	</rule>
 	<rule ref="SlevomatCodingStandard.ControlStructures.RequireSingleLineCondition">
 		<properties>
-			<property name="maxLineLength" value="79"/>
+			<property name="maxLineLength" value="80"/>
 			<property name="alwaysForSimpleConditions" value="true"/>
 		</properties>
 	</rule>
@@ -388,7 +388,7 @@
 	</rule>
 	<rule ref="SlevomatCodingStandard.Functions.RequireSingleLineCall">
 		<properties>
-			<property name="maxLineLength" value="79"/>
+			<property name="maxLineLength" value="80"/>
 			<property name="ignoreWithComplexParameter" value="true"/>
 		</properties>
 	</rule>
