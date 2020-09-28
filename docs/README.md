@@ -3,7 +3,7 @@
 ## Setup
 
 1. Install with `composer require --dev orisai/coding-standard`
-2. Create `ruleset.xml` in root of your project
+2. Create `phpcs.xml` in root of your project
 3. Insert following content
 	```xml
 	<ruleset
@@ -38,11 +38,11 @@
 
 Check code
 
-`vendor/bin/phpcs --standard=ruleset.xml --cache=var/tmp/codesniffer.dat src tests`
+`vendor/bin/phpcs --standard=phpcs.xml --cache=var/tmp/codesniffer.dat src tests`
 
 Fix errors
 
-`vendor/bin/phpcbf --standard=ruleset.xml --cache=var/tmp/codesniffer.dat src tests`
+`vendor/bin/phpcbf --standard=phpcs.xml --cache=var/tmp/codesniffer.dat src tests`
 
 ## Potential errors
 
