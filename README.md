@@ -1,5 +1,10 @@
 <h1 align="center">Orisai Coding Standard - PHP</h1>
 
+<p align="center">
+    PHP coding standard built on top of <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>
+    and <a href="https://github.com/slevomat/coding-standard">Slevomat Coding Standard</a> rules.
+</p>
+
 <p align=center>
   <a href="https://packagist.org/packages/orisai/coding-standard"><img src="https://badgen.net/packagist/dt/orisai/coding-standard?cache=3600"></a>
   <a href="https://packagist.org/packages/orisai/coding-standard"><img src="https://badgen.net/packagist/v/orisai/coding-standard?cache=3600"></a>
