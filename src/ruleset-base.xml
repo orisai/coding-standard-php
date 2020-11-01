@@ -236,12 +236,7 @@
 		Code analysis
 	-->
 
-	<rule ref="Generic.CodeAnalysis.EmptyStatement">
-		<!-- Empty catch statements are allowed -->
-		<exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedCatch"/>
-	</rule>
 	<rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
-	<rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
 	<rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
 
 	<!--
@@ -494,7 +489,6 @@
 	<rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
 	<rule ref="Generic.PHP.DisallowShortOpenTag"/>
 	<rule ref="Squiz.PHP.GlobalKeyword"/>
-	<rule ref="Squiz.PHP.NonExecutableCode"/>
 	<rule ref="SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall"/>
 	<rule ref="Generic.PHP.LowerCaseConstant"/>
 	<rule ref="Generic.PHP.LowerCaseKeyword"/>
