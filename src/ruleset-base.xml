@@ -373,7 +373,6 @@
 		<!-- Conflicts with return typehints with no space before colon in anonymous functions -->
 		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration.SpaceAfterBracket"/>
 	</rule>
-	<rule ref="Squiz.Functions.GlobalFunction"/>
 	<rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
 	<rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
 	<rule ref="SlevomatCodingStandard.Functions.RequireMultiLineCall">
