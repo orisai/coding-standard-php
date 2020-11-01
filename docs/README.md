@@ -11,6 +11,7 @@ PHP coding standard built on top of [PHP_CodeSniffer](https://github.com/squizla
 	- [Suppress rule entirely](#suppress-rule-entirely)
 - [Potential errors](#potential-errors)
 - [EditorConfig](#editorconfig)
+- [PhpStorm](#phpstorm)
 
 ## Setup
 
@@ -221,3 +222,10 @@ indent_size = 4
 indent_style = space
 indent_size=2
 ```
+
+## PhpStorm
+
+For [PhpStorm](https://www.jetbrains.com/phpstorm/) IDE is available config compatible with our coding standard.
+
+To use it, navigate to *Settings > Editor > Code Style > PHP* and choose *Import scheme* option in dropdown menu and select
+config file from *src/phpstorm/php-config.xml* in package directory.
