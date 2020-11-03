@@ -14,6 +14,13 @@ PHP coding standard built on top of [PHP_CodeSniffer](https://github.com/squizla
     - [Code-breaking sniffs](#code-breaking-sniffs)
 - [EditorConfig](#editorconfig)
 - [PhpStorm / IntelliJ IDEA](#phpstorm--intellij-idea)
+    - [Code style](#code-style)
+    - [File and code templates](#file-and-code-templates)
+        - [PHP files](#php-files)
+        - [Types - classes, interfaces, traits](#types---classes-interfaces-traits)
+        - [Parent method override](#parent-method-override)
+        - [Getters and setters](#getters-and-setters)
+        - [Function phpdoc](#function-phpdoc)
 
 ## Setup
 
@@ -174,7 +181,7 @@ We are using generics syntax for arrays instead array type hint syntax, some IDE
 - eg. `array<int>`, `array<array<bool>>` is used instead of `int[]`, `bool[][]`
 - Sniff `SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax`
 - Known compatible IDEs are:
-    - PHPStorm 2020.3
+    - PHPStorm / IntelliJ IDEA - since 2020.3
 
 ### Code-breaking sniffs
 
@@ -242,5 +249,220 @@ indent_size=2
 
 For [PhpStorm](https://www.jetbrains.com/phpstorm/) IDE is available config compatible with our coding standard.
 
-To use it, navigate to *Settings > Editor > Code Style > PHP* and choose *Import scheme* option in dropdown menu and select
-config file from *src/.idea/php-config.xml* in package directory.
+### Code style
+
+To use our code style options, navigate to [*File | Settings | Editor | Code Style | PHP*](jetbrains://PhpStorm/settings?name=Editor--Code+Style--PHP),
+choose *Import scheme* option in dropdown menu and select config file from *src/.idea/php-config.xml* in package directory.
+
+### File and code templates
+
+We offer code generation templates compatible with our coding standard. To use them, follow instructions:
+
+- Navigate to [IDE configuration folder](https://www.jetbrains.com/help/phpstorm/tuning-the-ide.html#config-directory).
+    - Or navigate to project `.idea` folder to set templates for project only.
+- Copy into the folder the package `src/.idea/fileTemplates` directory and override existing files.
+
+Alternatively you can also import templates one by one via settings at
+[*File | Settings | Editor | File and Code Templates*](jetbrains://PhpStorm/settings?name=Editor--File+and+Code+Templates).
+
+#### PHP files
+
+Each PHP file is generated with following heading
+
+```php
+<?php declare(strict_types = 1);
+
+namespace Example;
+```
+
+#### Types - classes, interfaces, traits
+
+All types are generated in clean format compatible with coding standard.
+
+```php
+<?php declare(strict_types = 1);
+
+namespace Example;
+
+class Example
+{
+
+}
+```
+
+#### Parent method override
+
+Overriding methods are generated with variable assignment in case method returns something.
+
+```php
+class ParentClass
+{
+
+	public function withReturn(string $string): string
+	{
+		return $string;
+	}
+
+	public function withoutReturn(string $string): void
+	{
+		echo $string;
+	}
+
+}
+
+class ChildClass extends ParentClass
+{
+
+	public function withReturn(string $string): string
+	{
+		$result = parent::withReturn($string);
+
+		return $result;
+	}
+
+	public function withoutReturn(string $string): void
+	{
+		parent::withoutReturn($string);
+	}
+
+}
+```
+
+#### Getters and setters
+
+Getters and setters are generated with additional phpdoc only in case type cannot be written natively and can't provide additional info.
+- Known limitations:
+    - In case property phpdoc uses syntax which is not supported by IDE, e.g. generics syntax (`GenericClass<Example>` or `array<int>`)
+    then method is generated without additional info from property phpdoc. For `array<anything>` is added `array<mixed>` instead.
+
+```php
+class GetSet
+{
+
+	/** @var string */
+	private $nonFluent;
+
+	/** @var string */
+	private $fluent;
+
+	/** @var string|int */
+	private $multiType;
+
+	/** @var array */
+	private $array;
+
+	/** @var bool */
+	private $bool;
+
+	/** @var string */
+	private static $static;
+
+	public function getNonFluent(): string
+	{
+		return $this->nonFluent;
+	}
+
+	public function setNonFluent(string $nonFluent): void
+	{
+		$this->nonFluent = $nonFluent;
+	}
+
+	/**
+	 * @return $this
+	 */
+	public function setFluent(string $fluent): self
+	{
+		$this->fluent = $fluent;
+
+		return $this;
+	}
+
+	/**
+	 * @return int|string
+	 */
+	public function getMultiType()
+	{
+		return $this->multiType;
+	}
+
+	/**
+	 * @param int|string $multiType
+	 */
+	public function setMultiType($multiType): void
+	{
+		$this->multiType = $multiType;
+	}
+
+	/**
+	 * @return array<mixed>
+	 */
+	public function getArray(): array
+	{
+		return $this->array;
+	}
+
+	/**
+	 * @param array<mixed> $array
+	 */
+	public function setArray(array $array): void
+	{
+		$this->array = $array;
+	}
+
+	public function isBool(): bool
+	{
+		return $this->bool;
+	}
+
+	public static function getStatic(): string
+	{
+		return self::$static;
+	}
+
+	public static function setStatic(string $static): void
+	{
+		self::$static = $static;
+	}
+
+}
+```
+
+#### Function phpdoc
+
+Function phpdoc is generated with all parameters and thrown exceptions.
+Return type is added only if it's not simple type which can be written natively (and matches `^[a-zA-Z0-9]+`).
+
+```php
+/**
+ * @param int $min
+ * @param int $max
+ * @return Example|int|string
+ * @throws Exception
+ */
+function multiReturnType(int $min, int $max)
+{
+	if (random_int($min, $max)) {
+		return 123;
+	} elseif (random_int($min, $max)) {
+		return 'string';
+	} elseif (random_int($min, $max)) {
+		return new Example();
+	}
+
+	throw new Exception();
+}
+
+/**
+ * @param int $min
+ * @param int $max
+ * @throws Exception
+ */
+function simpleReturnType(int $min, int $max): int
+{
+	if (random_int($min, $max)) {
+		return 123;
+	}
+
+	throw new Exception();
+}
+```

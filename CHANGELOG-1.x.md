@@ -10,5 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Rulesets for PHP 7.1, 7.2, 7.3 and 7.4
+- .editorconfig snippet
+- PHPStorm /IntelliJ IDEA files
+    - php code style
+    - file and code templates
 
 [Unreleased]: https://github.com/orisai/exceptions/compare/...HEAD
