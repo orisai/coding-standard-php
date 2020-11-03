@@ -1,0 +1,13 @@
+#if(!${SCALAR_TYPE_HINT} || ${SCALAR_TYPE_HINT} == 'array' || ${TYPE_HINT} != ${SCALAR_TYPE_HINT})
+/**
+ * @param #if(${TYPE_HINT} == 'array')array<mixed>#else${TYPE_HINT}#end $${PARAM_NAME}
+ */
+#end
+public ${STATIC} function set${NAME}(#if (${SCALAR_TYPE_HINT})${SCALAR_TYPE_HINT} #end$${PARAM_NAME})#if (${VOID_RETURN_TYPE}):void #end
+{
+#if (${STATIC} == "static")
+    self::$${FIELD_NAME} = $${PARAM_NAME};
+#else
+    $this->${FIELD_NAME} = $${PARAM_NAME};
+#end
+}
