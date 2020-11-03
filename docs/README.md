@@ -13,7 +13,7 @@ PHP coding standard built on top of [PHP_CodeSniffer](https://github.com/squizla
     - [IDE compatibility](#ide-compatibility)
     - [Code-breaking sniffs](#code-breaking-sniffs)
 - [EditorConfig](#editorconfig)
-- [PhpStorm](#phpstorm)
+- [PhpStorm / IntelliJ IDEA](#phpstorm--intellij-idea)
 
 ## Setup
 
@@ -238,9 +238,9 @@ indent_style = space
 indent_size=2
 ```
 
-## PhpStorm
+## PhpStorm / IntelliJ IDEA
 
 For [PhpStorm](https://www.jetbrains.com/phpstorm/) IDE is available config compatible with our coding standard.
 
 To use it, navigate to *Settings > Editor > Code Style > PHP* and choose *Import scheme* option in dropdown menu and select
-config file from *src/phpstorm/php-config.xml* in package directory.
+config file from *src/.idea/php-config.xml* in package directory.
