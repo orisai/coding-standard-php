@@ -10,6 +10,8 @@ PHP coding standard built on top of [PHP_CodeSniffer](https://github.com/squizla
 	- [Suppress rule in a path](#suppress-rule-in-a-path)
 	- [Suppress rule entirely](#suppress-rule-entirely)
 - [Potential errors](#potential-errors)
+    - [IDE compatibility](#ide-compatibility)
+    - [Code-breaking sniffs](#code-breaking-sniffs)
 - [EditorConfig](#editorconfig)
 - [PhpStorm](#phpstorm)
 
@@ -162,6 +164,19 @@ Inside of the coding standard importing rule you can suppress the rules it impor
 ```
 
 ## Potential errors
+
+### IDE compatibility
+
+As we always use the newest features of each PHP version, ensure that your IDE is fully compatible with given PHP version.
+You may need to suppress some sniffs otherwise.
+
+We are using generics syntax for arrays instead array type hint syntax, some IDEs may not be compatible yet.
+- eg. `array<int>`, `array<array<bool>>` is used instead of `int[]`, `bool[][]`
+- Sniff `SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax`
+- Known compatible IDEs are:
+    - PHPStorm 2020.3
+
+### Code-breaking sniffs
 
 Sniffs listed bellow add typehints independently of whether it is allowed by inheritance rules or not.
 
