@@ -18,7 +18,6 @@ PHP coding standard built on top of [PHP_CodeSniffer](https://github.com/squizla
     - [File and code templates](#file-and-code-templates)
         - [PHP files](#php-files)
         - [Types - classes, interfaces, traits](#types---classes-interfaces-traits)
-        - [Parent method override](#parent-method-override)
         - [Getters and setters](#getters-and-setters)
         - [Function phpdoc](#function-phpdoc)
 
@@ -286,44 +285,6 @@ namespace Example;
 
 class Example
 {
-
-}
-```
-
-#### Parent method override
-
-Overriding methods are generated with variable assignment in case method returns something.
-
-```php
-class ParentClass
-{
-
-	public function withReturn(string $string): string
-	{
-		return $string;
-	}
-
-	public function withoutReturn(string $string): void
-	{
-		echo $string;
-	}
-
-}
-
-class ChildClass extends ParentClass
-{
-
-	public function withReturn(string $string): string
-	{
-		$result = parent::withReturn($string);
-
-		return $result;
-	}
-
-	public function withoutReturn(string $string): void
-	{
-		parent::withoutReturn($string);
-	}
 
 }
 ```

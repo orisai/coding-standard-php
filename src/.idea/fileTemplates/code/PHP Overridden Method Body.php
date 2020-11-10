@@ -1,7 +1,5 @@
 #if (${RETURN} == "return")
-$result = parent::${NAME}(${PARAM_LIST});
-
-return $result;
+return parent::${NAME}(${PARAM_LIST});
 #else
 parent::${NAME}(${PARAM_LIST});
 #end
