@@ -42,6 +42,7 @@
 		<exclude name="Squiz.Arrays.ArrayDeclaration.NoComma"/>
 		<exclude name="Squiz.Arrays.ArrayDeclaration.NoCommaAfterLast"/>
 	</rule>
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
 
 	<!--
 	 	Classes
