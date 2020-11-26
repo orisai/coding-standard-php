@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Sniff `Generic.Arrays.DisallowLongArraySyntax`
 - PHPStorm / IntelliJ IDEA files
     - empty class, interface and trait doc comments to override useless defaults
+    - inline field doc comment (matches property doc comment) for multiple IDE versions compatibility
 
 ### Removed
 
