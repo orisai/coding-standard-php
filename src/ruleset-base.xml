@@ -546,9 +546,8 @@
 		Strings
 	-->
 
-	<rule ref="Squiz.Strings.DoubleQuoteUsage"/>
-	<rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar">
-		<message>Variable "%s" not allowed in double quoted string; use sprintf() instead</message>
+	<rule ref="Squiz.Strings.DoubleQuoteUsage">
+		<exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar"/>
 	</rule>
 	<rule ref="Squiz.Strings.ConcatenationSpacing">
 		<properties>

@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Sniff `Generic.Arrays.DisallowLongArraySyntax`
 
+### Removed
+
+- Sniff `Squiz.Strings.DoubleQuoteUsage.ContainsVar` - Double quoted strings with variables are allowed
+
 ## [1.0.0] - 2020-11-10
 
 ### Added
