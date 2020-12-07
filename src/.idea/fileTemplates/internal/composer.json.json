@@ -1,0 +1,20 @@
+{
+	"name": "#[[$vendor_name$]]#/#[[$package_name$]]#",
+	"description": "#[[$description$]]#",
+	"keywords": [],
+	"type": "library",
+	"license": "#[[$license$]]#",
+	"homepage": "#[[$homepage$]]#",
+	"authors": [
+		{
+			"name": "#[[$author$]]#",
+			"homepage": "#[[$author_homepage$]]#"
+		}
+	],
+	"require": {},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"config": {
+		"sort-packages": true
+	}
+}
