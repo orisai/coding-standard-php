@@ -1,4 +1,4 @@
-#if(!${RETURN_TYPE} || ${RETURN_TYPE} == 'array' || ${TYPE_HINT} != ${RETURN_TYPE_HINT})
+#if(${RETURN_TYPE})
 /**
  * @return #if(${TYPE_HINT} == 'array')array<mixed>#else${TYPE_HINT}#end
  */
