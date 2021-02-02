@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/1.1.1...HEAD)
 
+### Removed
+
+- `Squiz.Commenting.FunctionComment.InvalidNoReturn`
+	- not compatible with never returning types defined by phpstan and psalm
+
 ## [1.1.1](https://github.com/orisai/coding-standard-php/compare/1.1.0...1.1.1) - 2020-12-07
 
 ### Added
