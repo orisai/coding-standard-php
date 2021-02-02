@@ -151,6 +151,7 @@
 		<!-- Supports only built-in types of given php version and is also checked by PHPStan -->
 		<exclude name="Squiz.Commenting.FunctionComment.IncorrectTypeHint"/>
 		<exclude name="Squiz.Commenting.FunctionComment.InvalidReturn"/>
+		<exclude name="Squiz.Commenting.FunctionComment.InvalidNoReturn"/>
 		<exclude name="Squiz.Commenting.FunctionComment.InvalidReturnNotVoid"/>
 		<!-- Don't force int=>integer, bool=>boolean -->
 		<exclude name="Squiz.Commenting.FunctionComment.IncorrectParamVarName"/>
