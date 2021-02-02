@@ -9,9 +9,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [1.1.1](https://github.com/orisai/coding-standard-php/compare/1.1.0...1.1.1) - 2020-12-07
 
+### Added
+
 - PHPStorm / IntelliJ IDEA files
 	- `composer.json` template
-	- revert phpdoc param and return type filters (because any type can be generic we don't know which are useless)
+
+### Removed
+
+- PHPStorm / IntelliJ IDEA files
+	- phpdoc param and return type filters (because any type can be generic we don't know which are useless)
 
 ## [1.1.0](https://github.com/orisai/coding-standard-php/compare/1.0.0...1.1.0) - 2020-11-26
 
