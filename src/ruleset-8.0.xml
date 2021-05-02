@@ -10,12 +10,12 @@
 	<!-- Version-specific rules -->
 	<rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceEqualOperator"/>
 	<rule ref="SlevomatCodingStandard.Functions.RequireArrowFunction"/>
-	<rule ref="SlevomatCodingStandard.Functions.ArrowFunctionDeclaration">
+	<rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
 		<properties>
-			<property name="allowMultiLine" value="true"/>
-			<property name="spacesCountAfterKeyword" value="1"/>
-			<property name="spacesCountBeforeArrow" value="1"/>
-			<property name="spacesCountAfterArrow" value="1"/>
+			<property name="enabled" value="true"/>
+			<property name="withSpaces" value="no"/>
+			<property name="shortNullable" value="no"/>
+			<property name="nullPosition" value="last"/>
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall"/>
