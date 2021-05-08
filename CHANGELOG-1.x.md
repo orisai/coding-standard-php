@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/1.1.2...HEAD)
 
+### Added
+
+- `Squiz.ControlStructures.ControlSignature`
+
 ### Changed
 
 - PHPStorm / IntelliJ IDEA files

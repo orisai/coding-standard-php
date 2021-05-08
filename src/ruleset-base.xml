@@ -246,6 +246,7 @@
 	-->
 
 	<rule ref="Generic.ControlStructures.InlineControlStructure"/>
+	<rule ref="Squiz.ControlStructures.ControlSignature"/>
 	<rule ref="PSR2.ControlStructures.SwitchDeclaration">
 		<!-- Checked by more Generic.WhiteSpace.ScopeIndent.Incorrect -->
 		<exclude name="PSR2.ControlStructures.SwitchDeclaration.caseIndent"/>
