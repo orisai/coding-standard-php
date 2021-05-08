@@ -254,38 +254,38 @@
 		<exclude name="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing.IncorrectLinesCountBeforeControlStructure"/>
 		<exclude name="SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing.IncorrectLinesCountBeforeFirstControlStructure"/>
 		<properties>
-			<property name="linesCountAfterControlStructure" value="1"/>
-			<property name="linesCountAfterLastControlStructure" value="0"/>
-			<property name="tokensToCheck" type="array">
-				<element value="T_IF"/>
-				<element value="T_DO"/>
-				<element value="T_WHILE"/>
-				<element value="T_FOR"/>
-				<element value="T_FOREACH"/>
-				<element value="T_SWITCH"/>
-				<element value="T_TRY"/>
-				<element value="T_DEFAULT"/>
+			<property name="linesCountAfter" value="1"/>
+			<property name="linesCountAfterLast" value="0"/>
+			<property name="controlStructures" type="array">
+				<element value="if"/>
+				<element value="do"/>
+				<element value="while"/>
+				<element value="for"/>
+				<element value="foreach"/>
+				<element value="switch"/>
+				<element value="try"/>
+				<element value="default"/>
 			</property>
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing">
 		<properties>
 			<property name="allowSingleLineYieldStacking" value="true"/>
-			<property name="linesCountBeforeControlStructure" value="1"/>
-			<property name="linesCountBeforeFirstControlStructure" value="0"/>
+			<property name="linesCountBefore" value="1"/>
+			<property name="linesCountBeforeFirst" value="0"/>
 			<property name="linesCountBeforeWhenFirstInCaseOrDefault" value="null"/>
-			<property name="linesCountAfterControlStructure" value="1"/>
-			<property name="linesCountAfterLastControlStructure" value="0"/>
+			<property name="linesCountAfter" value="1"/>
+			<property name="linesCountAfterLast" value="0"/>
 			<property name="linesCountAfterWhenLastInCaseOrDefault" value="null"/>
 			<property name="linesCountAfterWhenLastInLastCaseOrDefault" value="null"/>
-			<property name="tokensToCheck" type="array">
-				<element value="T_GOTO"/>
-				<element value="T_BREAK"/>
-				<element value="T_CONTINUE"/>
-				<element value="T_RETURN"/>
-				<element value="T_THROW"/>
-				<element value="T_YIELD"/>
-				<element value="T_YIELD_FROM"/>
+			<property name="controlStructures" type="array">
+				<element value="goto"/>
+				<element value="break"/>
+				<element value="continue"/>
+				<element value="return"/>
+				<element value="throw"/>
+				<element value="yield"/>
+				<element value="yield_from"/>
 			</property>
 		</properties>
 	</rule>
@@ -565,9 +565,10 @@
 
 	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
 		<properties>
-			<property name="newlinesCountBetweenOpenTagAndDeclare" value="0"/>
+			<property name="declareOnFirstLine" value="true"/>
+			<property name="linesCountBeforeDeclare" value="0"/>
+			<property name="linesCountAfterDeclare" value="1"/>
 			<property name="spacesCountAroundEqualsSign" value="1"/>
-			<property name="newlinesCountAfterDeclare" value="2"/>
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax">
