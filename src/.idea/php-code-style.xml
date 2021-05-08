@@ -1,5 +1,7 @@
 <code_scheme name="Orisai" version="173">
 	<PHPCodeStyleSettings>
+		<option name="ALIGN_PHPDOC_PARAM_NAMES" value="true"/>
+		<option name="ALIGN_PHPDOC_COMMENTS" value="true"/>
 		<option name="COMMA_AFTER_LAST_ARRAY_ELEMENT" value="true"/>
 		<option name="PHPDOC_BLANK_LINE_BEFORE_TAGS" value="true"/>
 		<option name="PHPDOC_KEEP_BLANK_LINES" value="false"/>
@@ -7,8 +9,11 @@
 		<option name="LOWER_CASE_NULL_CONST" value="true"/>
 		<option name="ELSE_IF_STYLE" value="COMBINE"/>
 		<option name="VARIABLE_NAMING_STYLE" value="CAMEL_CASE"/>
+		<option name="BLANK_LINES_BEFORE_RETURN_STATEMENT" value="1" />
+		<option name="BLANK_LINES_AROUND_CONSTANTS" value="1"/>
+		<option name="BLANK_LINES_AFTER_OPENING_TAG" value="1"/>
 		<option name="BLANK_LINES_BEFORE_RETURN_STATEMENT" value="1"/>
-		<option name="KEEP_BLANK_LINES_AFTER_LBRACE" value="0"/>
+		<option name="KEEP_BLANK_LINES_AFTER_LBRACE" value="1"/>
 		<option name="SPACE_BEFORE_SHORT_CLOSURE_LEFT_PARENTHESIS" value="true"/>
 		<option name="FORCE_SHORT_DECLARATION_ARRAY_STYLE" value="true"/>
 		<option name="SPACE_AROUND_ASSIGNMENT_IN_DECLARE" value="true"/>
@@ -18,7 +23,9 @@
 		<option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false"/>
 		<option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1"/>
 		<option name="KEEP_BLANK_LINES_IN_CODE" value="1"/>
-		<option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0"/>
+		<option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="1"/>
+		<option name="BLANK_LINES_AFTER_PACKAGE" value="1"/>
+		<option name="BLANK_LINES_AROUND_FIELD" value="1"/>
 		<option name="BLANK_LINES_AFTER_CLASS_HEADER" value="1"/>
 		<option name="BLANK_LINES_BEFORE_CLASS_END" value="1"/>
 		<option name="SPECIAL_ELSE_IF_TREATMENT" value="true"/>
@@ -36,5 +43,131 @@
 		<indentOptions>
 			<option name="USE_TAB_CHARACTER" value="true"/>
 		</indentOptions>
+		<arrangement>
+			<tokens>
+				<token id="modifiers" name="modifiers">
+					<rules>
+						<rule>
+							<match>
+								<AND>
+									<PUBLIC>true</PUBLIC>
+									<STATIC>true</STATIC>
+								</AND>
+							</match>
+						</rule>
+						<rule>
+							<match>
+								<PUBLIC>true</PUBLIC>
+							</match>
+						</rule>
+						<rule>
+							<match>
+								<AND>
+									<PROTECTED>true</PROTECTED>
+									<STATIC>true</STATIC>
+								</AND>
+							</match>
+						</rule>
+						<rule>
+							<match>
+								<PROTECTED>true</PROTECTED>
+							</match>
+						</rule>
+						<rule>
+							<match>
+								<AND>
+									<PRIVATE>true</PRIVATE>
+									<STATIC>true</STATIC>
+								</AND>
+							</match>
+						</rule>
+						<rule>
+							<match>
+								<PRIVATE>true</PRIVATE>
+							</match>
+						</rule>
+					</rules>
+				</token>
+				<token id="visibility" name="visibility">
+					<rules>
+						<rule>
+							<match>
+								<PUBLIC>true</PUBLIC>
+							</match>
+						</rule>
+						<rule>
+							<match>
+								<PROTECTED>true</PROTECTED>
+							</match>
+						</rule>
+						<rule>
+							<match>
+								<PRIVATE>true</PRIVATE>
+							</match>
+						</rule>
+					</rules>
+				</token>
+			</tokens>
+			<groups>
+				<group>
+					<type>GETTERS_AND_SETTERS</type>
+					<order>KEEP</order>
+				</group>
+			</groups>
+			<rules>
+				<section>
+					<rule>
+						<match>
+							<CONST>true</CONST>
+						</match>
+					</rule>
+				</section>
+				<section>
+					<rule>
+						<match>
+							<AND>
+								<FIELD>true</FIELD>
+								<modifiers/>
+							</AND>
+						</match>
+					</rule>
+				</section>
+				<section>
+					<rule>
+						<match>
+							<CONSTRUCTOR>true</CONSTRUCTOR>
+						</match>
+					</rule>
+				</section>
+				<section>
+					<rule>
+						<match>
+							<METHOD>true</METHOD>
+						</match>
+					</rule>
+				</section>
+				<section>
+					<rule>
+						<match>
+							<TRAIT>true</TRAIT>
+						</match>
+					</rule>
+				</section>
+				<section>
+					<rule>
+						<match>
+							<INTERFACE>true</INTERFACE>
+						</match>
+					</rule>
+				</section>
+				<section>
+					<rule>
+						<match>
+							<CLASS>true</CLASS>
+						</match>
+					</rule>
+				</section>
+			</rules>
+		</arrangement>
 	</codeStyleSettings>
 </code_scheme>

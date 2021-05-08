@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/1.1.2...HEAD)
 
+### Changed
+
+- PHPStorm / IntelliJ IDEA files
+	- update php code style to better match rulesets
+
 ## [1.1.2](https://github.com/orisai/coding-standard-php/compare/1.1.1...1.1.2) - 2021-02-02
 
 ### Removed
