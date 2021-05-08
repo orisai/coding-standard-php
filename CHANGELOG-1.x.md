@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- `Squiz.ControlStructures.ControlSignature`
+- Sniff `Squiz.ControlStructures.ControlSignature`
+- Sniff `SlevomatCodingStandard.Functions.DisallowEmptyFunction`
 
 ### Changed
 
