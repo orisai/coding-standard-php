@@ -179,14 +179,8 @@
 	<rule ref="Squiz.Commenting.FunctionComment.ExtraParamComment">
 		<message>Function has more @param annotations than params</message>
 	</rule>
-	<rule ref="Squiz.Commenting.FunctionComment.DuplicateReturn">
-		<message>Function must have only one @return annotation</message>
-	</rule>
-	<rule ref="Squiz.Commenting.FunctionComment.InvalidNoReturn">
-		<message>Function has no return statement, but annotation @return is present</message>
-	</rule>
 	<rule ref="Squiz.Commenting.FunctionComment.InvalidThrows">
-		<message>'Exception type missing for @throws tag in function comment'</message>
+		<message>Exception type missing for @throws tag in function comment</message>
 	</rule>
 	<rule ref="Squiz.Commenting.VariableComment">
 		<exclude name="Squiz.Commenting.VariableComment.TagNotAllowed"/>
