@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - PHPStorm / IntelliJ IDEA files
 	- update php code style to better match rulesets
+- Rulesets
+	- no longer forbid usage of features which are not supported by minimal PHP version
 
 ## [1.1.2](https://github.com/orisai/coding-standard-php/compare/1.1.1...1.1.2) - 2021-02-02
 
