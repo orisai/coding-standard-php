@@ -56,6 +56,7 @@
 	<rule ref="Squiz.Classes.ValidClassName"/>
 	<rule ref="PSR2.Classes.PropertyDeclaration"/>
 	<rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility"/>
+	<rule ref="SlevomatCodingStandard.Classes.ClassMemberSpacing"/>
 	<rule ref="SlevomatCodingStandard.Classes.ConstantSpacing">
 		<properties>
 			<property name="minLinesCountBeforeWithComment" value="1"/>
