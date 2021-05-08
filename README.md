@@ -21,5 +21,6 @@ Please take a note knowledge of PHP, Composer and other tools used is expected a
 
 | State  | Version      | PHP     |
 |--------|--------------|---------|
-| dev    | `1.x-dev`    | `>=7.1` |
+| dev    | `2.x-dev`    | `>=7.1` |
+| stable | `^2.0.0`     | `>=7.1` |
 | stable | `^1.0.0`     | `>=7.1` |
