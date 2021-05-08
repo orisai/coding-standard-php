@@ -6,8 +6,4 @@
 
 	<!-- Import base -->
 	<rule ref="./ruleset-base.xml"/>
-
-	<!-- Version-specific rules -->
-	<rule ref="SlevomatCodingStandard.Functions.DisallowArrowFunction"/>
-	<rule ref="SlevomatCodingStandard.Numbers.DisallowNumericLiteralSeparator"/>
 </ruleset>
