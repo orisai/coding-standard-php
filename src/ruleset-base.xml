@@ -7,7 +7,7 @@
 	<arg value="p"/>
 	<arg value="s"/>
 	<arg name="colors"/>
-	<arg name="parallel" value="1"/>
+	<arg name="parallel" value="16"/>
 	<arg name="tab-width" value="4"/>
 	<arg name="encoding" value="utf-8"/>
 	<arg name="extensions" value="php"/>
