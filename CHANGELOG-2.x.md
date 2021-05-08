@@ -14,3 +14,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Sniff `SlevomatCodingStandard.TypeHints.PropertyTypeHintSpacing`
 - Sniff `SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace`
 - Sniff `SlevomatCodingStandard.Classes.ClassMemberSpacing`
+- Sniff `SlevomatCodingStandard.Files.LineLength`

@@ -342,6 +342,13 @@
 	<rule ref="PSR1.Files.SideEffects"/>
 	<rule ref="PSR2.Files.ClosingTag"/>
 	<rule ref="PSR2.Files.EndFileNewline"/>
+	<rule ref="SlevomatCodingStandard.Files.LineLength">
+		<properties>
+			<property name="lineLengthLimit" value="150"/>
+			<property name="ignoreComments" value="false"/>
+			<property name="ignoreImports" value="true"/>
+		</properties>
+	</rule>
 
 	<!--
 		Formatting
