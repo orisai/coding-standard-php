@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Rulesets
 	- no longer forbid usage of features which are not supported by minimal PHP version
 - Number of parallel processes from 1 to 16 to speed up run without cache
+- Require 1 empty line between all constants and properties instead of 0 or 1
 
 ## [1.1.2](https://github.com/orisai/coding-standard-php/compare/1.1.1...1.1.2) - 2021-02-02
 
