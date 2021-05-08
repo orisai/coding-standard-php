@@ -8,5 +8,5 @@
 	<rule ref="./ruleset-base.xml"/>
 
 	<!-- Version-specific rules -->
-	<rule ref="SlevomatCodingStandard.Functions.TrailingCommaInCall"/>
+	<rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall"/>
 </ruleset>

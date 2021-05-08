@@ -18,6 +18,6 @@
 			<property name="spacesCountAfterArrow" value="1"/>
 		</properties>
 	</rule>
-	<rule ref="SlevomatCodingStandard.Functions.TrailingCommaInCall"/>
+	<rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall"/>
 	<rule ref="SlevomatCodingStandard.Numbers.RequireNumericLiteralSeparator"/>
 </ruleset>
