@@ -2,7 +2,7 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:noNamespaceSchemaLocation="./../vendor/squizlabs/php_codesniffer/phpcs.xsd">
 	<!-- Configure ruleset -->
-	<config name="php_version" value="70400"/>
+	<config name="php_version" value="80000"/>
 
 	<!-- Import base -->
 	<rule ref="./ruleset-base.xml"/>
@@ -22,4 +22,17 @@
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.Numbers.RequireNumericLiteralSeparator"/>
+	<!-- - since 8.0 -->
+	<rule ref="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion"/>
+	<rule ref="SlevomatCodingStandard.ControlStructures.RequireNullSafeObjectOperator"/>
+	<rule ref="SlevomatCodingStandard.Exceptions.RequireNonCapturingCatch"/>
+	<rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration"/>
+	<rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
+		<properties>
+			<property name="withSpaces" value="no"/>
+			<property name="shortNullable" value="no"/>
+			<property name="nullPosition" value="last"/>
+		</properties>
+	</rule>
+
 </ruleset>

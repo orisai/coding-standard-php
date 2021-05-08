@@ -10,3 +10,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Compatibility with slevomat/coding-standard v7
+- Ruleset for PHP 8.0
