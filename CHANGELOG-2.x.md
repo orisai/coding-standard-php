@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/2.0.0...HEAD)
 
+### Changed
+
+- Constructor property promotion is required
+	- Replaced `SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion` by `SlevomatCodingStandard.Classes.RequireConstructorPropertyPromotion`
+
 ## [2.0.0](https://github.com/orisai/coding-standard-php/compare/1.2.0...2.0.0) - 2021-05-08
 
 ### Added
