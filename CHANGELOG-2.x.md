@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/2.1.0...HEAD)
 
+### Changed
+
+- Sniff `SlevomatCodingStandard.Namespaces.UnusedUses` ignores case of annotations with the highest probability to
+  collide with class names.
+
 ## [2.1.0](https://github.com/orisai/coding-standard-php/compare/2.0.0...2.1.0) - 2021-05-27
 
 ### Changed

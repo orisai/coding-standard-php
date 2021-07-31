@@ -457,7 +457,19 @@
 		<properties>
 			<property name="searchAnnotations" value="true"/>
 			<property name="ignoredAnnotationNames" type="array">
+				<!-- Common -->
+				<element value="@api"/>
+				<element value="@category"/>
+				<element value="@deprecated"/>
+				<element value="@example"/>
+				<element value="@link"/>
+				<element value="@template"/>
+				<element value="@version"/>
+				<!-- PHPUnit -->
+				<element value="@dataProvider"/>
+				<element value="@group"/>
 				<element value="@testCase"/>
+				<element value="@ticket"/>
 			</property>
 		</properties>
 	</rule>
