@@ -193,7 +193,77 @@
 		<exclude name="Squiz.Commenting.VariableComment.MissingVar"/>
 	</rule>
 
-	<rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing"/>
+	<rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
+		<properties>
+			<property name="annotationsGroups" type="array">
+				<element value="
+					@type,
+					@phpstan-type,
+					@psalm-type,
+
+					@import-type,
+					@phpstan-import-type,
+					@psalm-import-type,
+
+					@mixin,
+				"/>
+				<element value="
+					@template,
+					@phpstan-template,
+					@psalm-template,
+
+					@template-covariant,
+					@phpstan-template-covariant,
+					@psalm-template-covariant,
+
+					@extends,
+					@template-extends,
+					@phpstan-extends,
+
+					@implements,
+					@template-implements,
+					@phpstan-implements,
+
+					@param,
+					@param-,
+					@phpstan-param,
+					@phpstan-param-,
+					@psalm-param,
+					@psalm-param-,
+
+					@return,
+					@phpstan-return,
+					@psalm-return,
+
+					@throws,
+				"/>
+				<element value="
+					@var,
+					@phpstan-var,
+					@psalm-var,
+					@psalm-ignore-var,
+					@readonly,
+					@psalm-readonly,
+				"/>
+				<element value="
+					@pure,
+					@phpstan-pure,
+					@psalm-pure,
+					@impure,
+					@phpstan-impure,
+					@psalm-impure,
+				"/>
+				<element value="
+					@phpstan-,
+					@psalm-,
+				"/>
+				<element value="
+					@phpcs:,
+					@phpcsSuppress,
+				"/>
+			</property>
+		</properties>
+	</rule>
 	<rule ref="SlevomatCodingStandard.Commenting.DeprecatedAnnotationDeclaration"/>
 	<rule ref="SlevomatCodingStandard.Commenting.EmptyComment"/>
 	<rule ref="SlevomatCodingStandard.Commenting.ForbiddenAnnotations">

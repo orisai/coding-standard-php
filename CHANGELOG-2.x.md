@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/2.1.1...HEAD)
 
+## Added
+
+- Order and group most useful annotations
+  - Via sniff `SlevomatCodingStandard.Commenting.DocCommentSpacing`
+
 ## [2.1.1](https://github.com/orisai/coding-standard-php/compare/2.1.0...2.1.1) - 2021-07-31
 
 ### Changed
