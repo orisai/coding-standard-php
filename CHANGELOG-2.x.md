@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/2.2.0...HEAD)
 
+### Changed
+
+- Fix collision of `SlevomatCodingStandard.ControlStructures.RequireSingleLineCondition`
+  and `SlevomatCodingStandard.Functions.RequireMultiLineCall` sniffs
+    - `RequireSingleLineCondition` does not require simple conditions to be single line
+
 ## [2.2.0](https://github.com/orisai/coding-standard-php/compare/2.1.1...2.2.0) - 2021-08-01
 
 ### Added

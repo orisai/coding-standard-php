@@ -385,7 +385,7 @@
 	<rule ref="SlevomatCodingStandard.ControlStructures.RequireSingleLineCondition">
 		<properties>
 			<property name="maxLineLength" value="80"/>
-			<property name="alwaysForSimpleConditions" value="true"/>
+			<property name="alwaysForSimpleConditions" value="false"/>
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.ControlStructures.UselessIfConditionWithReturn"/>
