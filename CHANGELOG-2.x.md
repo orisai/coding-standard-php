@@ -9,10 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.2.0](https://github.com/orisai/coding-standard-php/compare/2.1.1...2.2.0) - 2021-08-01
 
-## Added
+### Added
 
 - Order and group most useful annotations
-  - Via sniff `SlevomatCodingStandard.Commenting.DocCommentSpacing`
+	- Via sniff `SlevomatCodingStandard.Commenting.DocCommentSpacing`
 
 ## [2.1.1](https://github.com/orisai/coding-standard-php/compare/2.1.0...2.1.1) - 2021-07-31
 
@@ -26,7 +26,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Constructor property promotion is required
-	- Replaced `SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion` by `SlevomatCodingStandard.Classes.RequireConstructorPropertyPromotion`
+	- Replaced `SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion`
+	  by `SlevomatCodingStandard.Classes.RequireConstructorPropertyPromotion`
 
 ## [2.0.0](https://github.com/orisai/coding-standard-php/compare/1.2.0...2.0.0) - 2021-05-08
 
