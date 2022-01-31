@@ -1,4 +1,8 @@
-<h1 align="center">Orisai Coding Standard - PHP</h1>
+<h1 align="center">
+	<img src="https://github.com/orisai/.github/blob/main/images/repo_title.png" alt="Orisai"/>
+	<br/>
+	Coding Standard - PHP
+</h1>
 
 <p align="center">
     PHP coding standard built on top of <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>
