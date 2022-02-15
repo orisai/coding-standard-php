@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/2.2.1...HEAD)
 
+### Added
+
+- `PSR2.Methods.FunctionClosingBrace` - remove empty lines before function closing brace
+
 ## [2.2.1](https://github.com/orisai/coding-standard-php/compare/2.2.0...2.2.1) - 2021-08-01
 
 ### Changed

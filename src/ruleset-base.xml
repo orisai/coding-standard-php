@@ -476,6 +476,7 @@
 		<!-- Space after closing bracket should depend on where is function called -->
 		<exclude name="PSR2.Methods.FunctionCallSignature.SpaceAfterCloseBracket"/>
 	</rule>
+	<rule ref="PSR2.Methods.FunctionClosingBrace"/>
 	<rule ref="PSR2.Methods.MethodDeclaration"/>
 
 	<!--
