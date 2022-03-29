@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/2.2.3...HEAD)
 
+### Added
+
+- `SlevomatCodingStandard.Commenting.UselessInheritDocComment`
+    - Remove `{@inheritDoc}`
+    - For PHP >=8.0
+
 ## [2.2.3](https://github.com/orisai/coding-standard-php/compare/2.2.2...2.2.3) - 2022-03-29
 
 ### Removed

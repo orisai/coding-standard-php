@@ -24,6 +24,7 @@
 	<rule ref="SlevomatCodingStandard.Numbers.RequireNumericLiteralSeparator"/>
 	<!-- - since 8.0 -->
 	<rule ref="SlevomatCodingStandard.Classes.RequireConstructorPropertyPromotion"/>
+	<rule ref="SlevomatCodingStandard.Commenting.UselessInheritDocComment"/>
 	<rule ref="SlevomatCodingStandard.ControlStructures.RequireNullSafeObjectOperator"/>
 	<rule ref="SlevomatCodingStandard.Exceptions.RequireNonCapturingCatch"/>
 	<rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration"/>
