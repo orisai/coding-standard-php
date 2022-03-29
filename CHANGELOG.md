@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/2.2.2...HEAD)
 
+### Removed
+
+- `Traversable` type hint (e.g. `array<mixed>` instead of `array`) is not required
+    - Removed for properties, parameters and return types
+    - Fully covered by PHPStan rules
+    - Allows to completely drop `{@inheritDoc}` annotations (at least for PHP >=8.0 with `mixed` type)
+
 ## [2.2.2](https://github.com/orisai/coding-standard-php/compare/2.2.1...2.2.2) - 2022-02-15
 
 ### Added

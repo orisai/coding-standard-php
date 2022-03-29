@@ -682,6 +682,7 @@
 	</rule>
 	<rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
 	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
+		<exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification"/>
 		<properties>
 			<property name="traversableTypeHints" type="array">
 				<element value="Traversable"/>
@@ -689,6 +690,7 @@
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
+		<exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification"/>
 		<properties>
 			<property name="traversableTypeHints" type="array">
 				<element value="Traversable"/>
@@ -696,6 +698,7 @@
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
+		<exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification"/>
 		<properties>
 			<property name="traversableTypeHints" type="array">
 				<element value="Traversable"/>
