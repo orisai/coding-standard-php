@@ -10,4 +10,9 @@
 	<!-- Version-specific rules -->
 	<!-- - since 7.3 -->
 	<rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall"/>
+	<rule ref="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall">
+		<properties>
+			<property name="onlySingleLine" value="true"/>
+		</properties>
+	</rule>
 </ruleset>
