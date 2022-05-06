@@ -32,6 +32,11 @@
 	<rule ref="SlevomatCodingStandard.Commenting.UselessInheritDocComment"/>
 	<rule ref="SlevomatCodingStandard.ControlStructures.RequireNullSafeObjectOperator"/>
 	<rule ref="SlevomatCodingStandard.Exceptions.RequireNonCapturingCatch"/>
+	<rule ref="SlevomatCodingStandard.Functions.DisallowTrailingCommaInDeclaration">
+		<properties>
+			<property name="onlySingleLine" value="true"/>
+		</properties>
+	</rule>
 	<rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInClosureUse"/>
 	<rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration"/>
 	<rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
