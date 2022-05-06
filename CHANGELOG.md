@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - `SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall`
   - Trailing comma is forbidden in single-line calls
+- `SlevomatCodingStandard.Functions.RequireTrailingCommaInClosureUse`
+  - Trailing comma is required in multi-line Closure `use()`
 
 ## [2.3.0](https://github.com/orisai/coding-standard-php/compare/2.2.3...2.3.0) - 2022-03-29
 
