@@ -16,6 +16,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `SlevomatCodingStandard.Functions.DisallowTrailingCommaInDeclaration`
 	- Trailing comma is forbidden in single-line declarations
 
+### Removed
+
+- `Generic.NamingConventions.UpperCaseConstantName`
+  - Constants names don't require any convention (preferably use PascalCase)
+
 ## [2.3.0](https://github.com/orisai/coding-standard-php/compare/2.2.3...2.3.0) - 2022-03-29
 
 ### Added

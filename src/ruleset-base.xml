@@ -550,7 +550,6 @@
 	-->
 
 	<rule ref="Generic.NamingConventions.ConstructorName"/>
-	<rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
 	<rule ref="Generic.NamingConventions.CamelCapsFunctionName">
 		<properties>
 			<property name="strict" value="false"/>
