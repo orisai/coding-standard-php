@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/2.4.0...HEAD)
 
+### Fixed
+
+- `phpstan/phpdoc-parser` locked to `~1.5.1` to prevent compatibility issue of `~1.6.0` and `slevomat/coding-standard`
+
 ## [2.4.0](https://github.com/orisai/coding-standard-php/compare/2.3.0...2.4.0) - 2022-05-06
 
 ### Added
