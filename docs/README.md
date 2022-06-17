@@ -49,7 +49,7 @@ PHP coding standard built on top of [PHP_CodeSniffer](https://github.com/squizla
 	</ruleset>
 	```
 4. Replace `<VERSION>` with minimal php version you want to support
-	- supported are `7.1`, `7.2`, `7.3`, `7.4`, `8.0`
+	- supported are `7.2`, `7.3`, `7.4`, `8.0`
 5. Replace `<NAMESPACE>` with your root namespace
 	- by default expected code directory is `src` and tests directory is `tests` with `Tests` namespace prefix
 6. Create directory for temp files
