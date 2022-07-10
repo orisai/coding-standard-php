@@ -568,7 +568,6 @@
 		Operators
 	-->
 
-	<rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators"/>
 	<rule ref="Squiz.Operators.IncrementDecrementUsage">
 		<exclude name="Squiz.Operators.IncrementDecrementUsage.NoBrackets"/>
 	</rule>

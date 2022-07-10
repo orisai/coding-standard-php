@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.1.0...HEAD)
 
+### Removed
+
+- `SlevomatCodingStandard.Operators.DisallowEqualOperators` sniff
+  - use `phpstan/phpstan-strict-rules` with bleeding edge instead
+
 ## [3.1.0](https://github.com/orisai/coding-standard-php/compare/3.0.0...3.1.0) - 2022-07-08
 
 ### Added
