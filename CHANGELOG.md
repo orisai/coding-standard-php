@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.1.1...HEAD)
 
+### Removed
+
+- `SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingAnyTypeHint`
+	- use `phpstan/phpstan` instead
+	- PHPStan does the same check *and* respects inheritance
+- `SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingAnyTypeHint`
+	- use `phpstan/phpstan` instead
+	- PHPStan does the same check *and* respects inheritance
+
 ## [3.1.1](https://github.com/orisai/coding-standard-php/compare/3.1.0...3.1.1) - 2022-07-10
 
 ### Removed
