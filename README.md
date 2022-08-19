@@ -30,3 +30,16 @@
 <p>
 
 ##
+
+```php
+final class FormattedCode
+{
+
+	public function isSexy(): void
+	{
+		// It's hard to find great example. Just test it on your code.
+		// May be annoying at first, but easier to read in the long term.
+	}
+
+}
+```
