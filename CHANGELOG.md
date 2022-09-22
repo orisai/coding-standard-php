@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.1.2...HEAD)
 
+### Added
+
+- `SlevomatCodingStandard.PHP.RequireExplicitAssertion`
+  - Option `enableIntegerRanges` is enabled
+  - Option `enableAdvancedStringTypes` is enabled
+
 ### Changed
 
 - `slevomat/coding-standard` upgraded to `^8.5.0`

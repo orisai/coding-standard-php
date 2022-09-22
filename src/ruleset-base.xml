@@ -620,7 +620,12 @@
 	<rule ref="SlevomatCodingStandard.PHP.OptimizedFunctionsWithoutUnpacking"/>
 	<rule ref="SlevomatCodingStandard.PHP.RequireNowdoc"/>
 	<rule ref="SlevomatCodingStandard.PHP.ReferenceSpacing"/>
-	<rule ref="SlevomatCodingStandard.PHP.RequireExplicitAssertion"/>
+	<rule ref="SlevomatCodingStandard.PHP.RequireExplicitAssertion">
+		<properties>
+			<property name="enableIntegerRanges" value="true"/>
+			<property name="enableAdvancedStringTypes" value="true"/>
+		</properties>
+	</rule>
 	<rule ref="SlevomatCodingStandard.PHP.ShortList"/>
 	<rule ref="SlevomatCodingStandard.PHP.TypeCast"/>
 	<rule ref="SlevomatCodingStandard.PHP.UselessParentheses">
