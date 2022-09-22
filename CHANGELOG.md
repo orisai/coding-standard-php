@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.1.2...HEAD)
 
+### Changed
+
+- `slevomat/coding-standard` upgraded to `^8.5.0`
+
 ## [3.1.2](https://github.com/orisai/coding-standard-php/compare/3.1.1...3.1.2) - 2022-07-17
 
 ### Removed
