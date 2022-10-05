@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.2.0...HEAD)
 
+### Changed
+
+- `SlevomatCodingStandard.Files.LineLength`
+  - ignores comments
+
 ## [3.2.0](https://github.com/orisai/coding-standard-php/compare/3.1.2...3.2.0) - 2022-09-22
 
 ### Added
