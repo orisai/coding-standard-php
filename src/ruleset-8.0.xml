@@ -28,6 +28,7 @@
 	</rule>
 	<rule ref="SlevomatCodingStandard.Numbers.RequireNumericLiteralSeparator"/>
 	<!-- - since 8.0 -->
+	<rule ref="SlevomatCodingStandard.Attributes.DisallowAttributesJoining"/>
 	<rule ref="SlevomatCodingStandard.Attributes.DisallowMultipleAttributesPerLine"/>
 	<rule ref="SlevomatCodingStandard.Attributes.RequireAttributeAfterDocComment"/>
 	<rule ref="SlevomatCodingStandard.Classes.RequireConstructorPropertyPromotion"/>
