@@ -136,17 +136,6 @@
 	 	Comments
 	-->
 
-	<rule ref="Generic.Commenting.DocComment">
-		<exclude name="Generic.Commenting.DocComment.ContentAfterOpen"/>
-		<exclude name="Generic.Commenting.DocComment.ContentBeforeClose"/>
-		<exclude name="Generic.Commenting.DocComment.LongNotCapital"/>
-		<exclude name="Generic.Commenting.DocComment.MissingShort"/>
-		<exclude name="Generic.Commenting.DocComment.NonParamGroup"/>
-		<exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
-		<exclude name="Generic.Commenting.DocComment.SpacingBeforeTags"/>
-		<exclude name="Generic.Commenting.DocComment.TagsNotGrouped"/>
-		<exclude name="Generic.Commenting.DocComment.TagValueIndent"/>
-	</rule>
 	<rule ref="PEAR.Commenting.InlineComment"/>
 	<rule ref="Squiz.Commenting.DocCommentAlignment">
 		<!-- Doctrine have compound annotations support, space after star is valid -->

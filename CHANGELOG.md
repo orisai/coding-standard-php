@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `SlevomatCodingStandard.Commenting.DocCommentSpacing` supports sorting of `assert`, `param-out`, `this-out`
   and `self-out` and their `phpstan-` and `psalm-` prefixed variants
 
+### Removed
+- `Generic.Commenting.DocComment`
+  - redundant functions of superfluous `Squiz.WhiteSpace.SuperfluousWhitespace` and `SlevomatCodingStandard.Commenting.DocCommentSpacing`
+
 ## [3.3.0](https://github.com/orisai/coding-standard-php/compare/3.2.1...3.3.0) - 2022-10-05
 
 ### Added
