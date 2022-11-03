@@ -239,6 +239,27 @@
 					@psalm-param,
 					@psalm-param-,
 
+					@assert,
+					@assert-if-true,
+					@assert-if-false,
+					@phpstan-assert,
+					@phpstan-assert-if-true,
+					@phpstan-assert-if-false,
+					@psalm-assert,
+					@psalm-assert-if-true,
+					@psalm-assert-if-false,
+
+					@param-out,
+					@phpstan-param-out,
+					@psalm-param-out,
+
+					@this-out,
+					@self-out,
+					@phpstan-this-out,
+					@phpstan-self-out,
+					@psalm-this-out,
+					@psalm-self-out,
+
 					@return,
 					@phpstan-return,
 					@psalm-return,
