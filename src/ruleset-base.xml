@@ -307,7 +307,11 @@
 			</property>
 		</properties>
 	</rule>
-	<rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration"/>
+	<rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration">
+		<properties>
+			<property name="allowDocCommentAboveReturn" value="true"/>
+		</properties>
+	</rule>
 	<rule ref="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment"/>
 	<rule ref="SlevomatCodingStandard.Commenting.UselessFunctionDocComment">
 		<properties>

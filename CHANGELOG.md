@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.3.1...HEAD)
 
+### Added
+
+- `SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration` allows `@var` above `return`
+
 ## [3.3.1](https://github.com/orisai/coding-standard-php/compare/3.3.0...3.3.1) - 2022-11-03
 
 ### Added
