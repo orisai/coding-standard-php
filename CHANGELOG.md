@@ -7,9 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.3.3...HEAD)
 
+### Removed
+
+- `Squiz.Commenting.VariableComment.VarOrder` error
+	- redundant and colliding with
+	  superfluous `SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectAnnotationsGroup`
+
 ## [3.3.3](https://github.com/orisai/coding-standard-php/compare/3.3.2...3.3.3) - 2022-12-09
 
-## Changed
+### Changed
 
 - Composer
 	- allows PHP 8.2

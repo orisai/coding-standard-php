@@ -188,6 +188,8 @@
 		<!-- Property may have native type -->
 		<exclude name="Squiz.Commenting.VariableComment.Missing"/>
 		<exclude name="Squiz.Commenting.VariableComment.MissingVar"/>
+		<!-- Superseded by SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectAnnotationsGroup -->
+		<exclude name="Squiz.Commenting.VariableComment.VarOrder"/>
 	</rule>
 
 	<rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
