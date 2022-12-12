@@ -5,7 +5,9 @@ All notable changes to this project will be documented in this file, in reverse 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.3.3...HEAD)
+## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.3.4...HEAD)
+
+## [3.3.4](https://github.com/orisai/coding-standard-php/compare/3.3.3...3.3.4) - 2022-12-12
 
 ### Removed
 
