@@ -1,8 +1,10 @@
 # Coding Standard - PHP
 
-PHP coding standard built on top of [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) and [Slevomat Coding Standard](https://github.com/slevomat/coding-standard) rules.
+PHP coding standard built on top of [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+and [Slevomat Coding Standard](https://github.com/slevomat/coding-standard) rules.
 
 ## Content
+
 - [Setup](#setup)
 - [Run CodeSniffer](#run-codesniffer)
 - [Suppressing rules](#suppressing-rules)
@@ -10,12 +12,12 @@ PHP coding standard built on top of [PHP_CodeSniffer](https://github.com/squizla
 	- [Suppress rule in a path](#suppress-rule-in-a-path)
 	- [Suppress rule entirely](#suppress-rule-entirely)
 - [Potential errors](#potential-errors)
-    - [IDE compatibility](#ide-compatibility)
-    - [Code-breaking sniffs](#code-breaking-sniffs)
+	- [IDE compatibility](#ide-compatibility)
+	- [Code-breaking sniffs](#code-breaking-sniffs)
 - [EditorConfig](#editorconfig)
 - [PhpStorm / IntelliJ IDEA](#phpstorm--intellij-idea)
-    - [Code style](#code-style)
-    - [File and code templates](#file-and-code-templates)
+	- [Code style](#code-style)
+	- [File and code templates](#file-and-code-templates)
 
 ## Setup
 
@@ -67,7 +69,8 @@ Fix errors
 
 ## Suppressing rules
 
-You can always suppress rules instead of fixing the errors. Rules can be suppressed either locally, in path or entirely for project.
+You can always suppress rules instead of fixing the errors. Rules can be suppressed either locally, in path or entirely
+for project.
 
 `vendor/bin/phpcs` outputs all errors like this:
 
@@ -81,7 +84,8 @@ FOUND 1 ERROR AFFECTING 1 LINE
 ---------------------------------
 ```
 
-The `Name.Of.The.Sniff` printed in brackets under the error is the string which can be used to suppress the sniff, as described below.
+The `Name.Of.The.Sniff` printed in brackets under the error is the string which can be used to suppress the sniff, as
+described below.
 
 ### Suppress rule locally
 
@@ -120,7 +124,8 @@ echo 'some php code';
 echo 'some php code';
 ```
 
-Learn more in [PHP_CodeSniffer docs](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-parts-of-a-file)
+Learn more in
+[PHP_CodeSniffer docs](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-parts-of-a-file)
 
 ### Suppress rule in a path
 
@@ -143,9 +148,11 @@ You can also suppress all rules in a path
 ```
 
 The `<exclude-pattern>` is treated like a regular expression
+
 - ensure that `.` (`.php`) is escaped (`\.php`)
 - `*` is converted to `.*`
-- learn more in [PHP_CodeSniffer docs](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-files-and-folders)
+- learn more in
+  [PHP_CodeSniffer docs](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-files-and-folders)
 
 ```xml
 <ruleset>
@@ -169,32 +176,39 @@ Inside of the coding standard importing rule you can suppress the rules it impor
 
 ### IDE compatibility
 
-As we always use the newest features of each PHP version, ensure that your IDE is fully compatible with given PHP version.
+As we always use the newest features of each PHP version, ensure that your IDE is fully compatible with given PHP
+version.
 You may need to suppress some sniffs otherwise.
 
 We are using generics syntax for arrays instead array type hint syntax, some IDEs may not be compatible yet.
-- eg. `array<int>`, `array<array<bool>>` is used instead of `int[]`, `bool[][]`
+
+- e.g. `array<int>`, `array<array<bool>>` is used instead of `int[]`, `bool[][]`
 - Sniff `SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax`
 - Known compatible IDEs are:
-    - PHPStorm / IntelliJ IDEA - since 2020.3
+	- PHPStorm / IntelliJ IDEA - since 2020.3
 
 ### Code-breaking sniffs
 
 Sniffs listed bellow add typehints independently of whether it is allowed by inheritance rules or not.
 
 `SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint`
+
 - Adds function parameter type based on annotation typehint
-- In `slevomat/coding-standard < 6.0` was `SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint`
+- In `slevomat/coding-standard < 6.0`
+  was `SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint`
 
 `SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint`
+
 - Adds function return type based on annotation typehint
 - In `slevomat/coding-standard < 6.0` was `SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingReturnTypeHint`
 
 `SlevomatCodingStandard.TypeHints.PropertyTypeHint`
+
 - Adds property type based on annotation typehint
 - php 7.4+
 
-It may lead to php errors which must be suppressed. These sniffs specifically can be suppressed with `@phpcsSuppress` annotation.
+It may lead to php errors which must be suppressed. These sniffs specifically can be suppressed with `@phpcsSuppress`
+annotation.
 
 ```php
 class Example extends ClassNotDeclaringTheTypes
@@ -260,4 +274,5 @@ We offer code generation templates compatible with our coding standard. To use t
 - Copy into the folder the package `ide-config/.idea/fileTemplates` directory and override existing files.
 
 Alternatively you can also import templates one by one via settings at
-[*File | Settings | Editor | File and Code Templates*](jetbrains://PhpStorm/settings?name=Editor--File+and+Code+Templates).
+[*File | Settings | Editor | File and Code
+Templates*](jetbrains://PhpStorm/settings?name=Editor--File+and+Code+Templates).
