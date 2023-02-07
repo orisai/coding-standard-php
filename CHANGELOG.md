@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.3.4...HEAD)
 
+### Changed
+
+- Moved IntelliJ files from src/.idea to ide-config/.idea to prevent them being picked up by static analysis tools
+
 ## [3.3.4](https://github.com/orisai/coding-standard-php/compare/3.3.3...3.3.4) - 2022-12-12
 
 ### Removed

@@ -246,16 +246,18 @@ For [PhpStorm](https://www.jetbrains.com/phpstorm/) IDE is available config comp
 
 ### Code style
 
-To use our code style options, navigate to [*File | Settings | Editor | Code Style | PHP*](jetbrains://PhpStorm/settings?name=Editor--Code+Style--PHP),
-choose *Import scheme* option in dropdown menu and select config file from *src/.idea/php-config.xml* in package directory.
+To use our code style options, navigate to [*File | Settings | Editor | Code Style |
+PHP*](jetbrains://PhpStorm/settings?name=Editor--Code+Style--PHP),
+choose *Import scheme* option in dropdown menu and select config file from *ide-config/.idea/php-config.xml* in package
+directory.
 
 ### File and code templates
 
 We offer code generation templates compatible with our coding standard. To use them, follow instructions:
 
 - Navigate to [IDE configuration folder](https://www.jetbrains.com/help/phpstorm/tuning-the-ide.html#config-directory).
-    - Or navigate to project `.idea` folder to set templates for project only.
-- Copy into the folder the package `src/.idea/fileTemplates` directory and override existing files.
+	- Or navigate to project `.idea` folder to set templates for project only.
+- Copy into the folder the package `ide-config/.idea/fileTemplates` directory and override existing files.
 
 Alternatively you can also import templates one by one via settings at
 [*File | Settings | Editor | File and Code Templates*](jetbrains://PhpStorm/settings?name=Editor--File+and+Code+Templates).
