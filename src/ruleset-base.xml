@@ -364,6 +364,7 @@
 			</property>
 		</properties>
 	</rule>
+	<rule ref="SlevomatCodingStandard.ControlStructures.DisallowTrailingMultiLineTernaryOperator"/>
 	<rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing">
 		<properties>
 			<property name="allowSingleLineYieldStacking" value="true"/>
