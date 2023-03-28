@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- `SlevomatCodingStandard.Classes.EnumCaseSpacing` sniff
 - `SlevomatCodingStandard.Classes.RequireSelfReference` sniff
 - `SlevomatCodingStandard.ControlStructures.DisallowTrailingMultiLineTernaryOperator` sniff
 
