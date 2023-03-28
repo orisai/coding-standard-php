@@ -115,6 +115,7 @@
 			<property name="maxLineLength" value="80"/>
 		</properties>
 	</rule>
+	<rule ref="SlevomatCodingStandard.Classes.RequireSelfReference"/>
 	<rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming"/>
 	<rule ref="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming"/>
 	<rule ref="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming"/>
