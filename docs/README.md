@@ -34,7 +34,7 @@ and [Slevomat Coding Standard](https://github.com/slevomat/coding-standard) rule
 		<arg name="basepath" value="./"/>
 
 		<!-- Configure cache -->
-		<arg name="cache" value="./var/build-tools/codesniffer.dat"/>
+		<arg name="cache" value="./var/tools/PHP_CodeSniffer/cache.dat"/>
 
 		<!-- Import coding-standard -->
 		<rule ref="./vendor/orisai/coding-standard/src/ruleset-<VERSION>.xml"/>
@@ -55,7 +55,7 @@ and [Slevomat Coding Standard](https://github.com/slevomat/coding-standard) rule
 5. Replace `<NAMESPACE>` with your root namespace
 	- by default expected code directory is `src` and tests directory is `tests` with `Tests` namespace prefix
 6. Create directory for temp files
-	- by default is expected to be `var/build-tools`
+	- `phpcs.xml` from example expects directory `var/tools/PHP_CodeSniffer` (see `<arg name="cache"`)
 
 ## Run CodeSniffer
 
