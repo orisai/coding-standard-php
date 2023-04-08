@@ -2,10 +2,12 @@
 	"name": "orisai/coding-standard",
 	"description": "Strict PHP coding standard",
 	"keywords": [
+		"dev",
+		"coding standard",
 		"orisai",
 		"phpcs",
 		"standards",
-		"coding standard"
+		"static analysis"
 	],
 	"type": "library",
 	"license": "MPL-2.0",
