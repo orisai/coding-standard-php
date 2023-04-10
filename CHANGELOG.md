@@ -43,6 +43,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - `srand` -> `mt_srand`
   - `user_error` -> `trigger_error`
 
+### Changed
+
+- `slevomat/coding-standard` upgraded to `^8.10.0`
+
 ### Removed
 
 - `delete()` as an alias of `unset()`, because it does not exist
