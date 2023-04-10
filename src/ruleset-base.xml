@@ -623,8 +623,28 @@
 				<element key="chop" value="rtrim"/>
 				<element key="close" value="closedir"/>
 				<element key="die" value="exit"/>
+				<element key="diskfreespace" value="disk_free_space"/>
 				<element key="doubleval" value="floatval"/>
+				<element key="ftp_quit" value="ftp_close"/>
 				<element key="fputs" value="fwrite"/>
+				<element key="get_required_files" value="get_included_files"/>
+				<element key="gzputs" value="gzwrite"/>
+				<element key="ldap_close" value="ldap_unbind"/>
+				<element key="ldap_modify" value="ldap_mod_replace"/>
+				<element key="msgpack_pack" value="msgpack_serialize"/>
+				<element key="msgpack_unpack" value="msgpack_unserialize"/>
+				<element key="odbc_do" value="odbc_exec"/>
+				<element key="odbc_field_precision" value="odbc_field_len"/>
+				<element key="openssl_get_privatekey" value="openssl_pkey_get_private"/>
+				<element key="openssl_get_publickey" value="openssl_pkey_get_public"/>
+				<element key="imap_create" value="imap_createmailbox"/>
+				<element key="imap_fetchtext" value="imap_body"/>
+				<element key="imap_header" value="imap_headerinfo"/>
+				<element key="imap_listmailbox" value="imap_list"/>
+				<element key="imap_listsubscribed" value="imap_lsub"/>
+				<element key="imap_rename" value="imap_renamemailbox"/>
+				<element key="imap_scan" value="imap_listscan"/>
+				<element key="imap_scanmailbox" value="imap_listscan"/>
 				<element key="ini_alter" value="ini_set"/>
 				<element key="is_double" value="is_float"/>
 				<element key="is_integer" value="is_int"/>
@@ -634,11 +654,20 @@
 				<element key="is_writeable" value="is_writable"/>
 				<element key="join" value="implode"/>
 				<element key="key_exists" value="array_key_exists"/>
+				<element key="pcntl_errno" value="pcntl_get_last_error"/>
 				<element key="pos" value="current"/>
+				<element key="posix_errno" value="posix_get_last_error"/>
 				<element key="print" value="echo"/>
+				<element key="read_exif_data" value="exif_read_data"/>
+				<element key="session_commit" value="session_write_close"/>
+				<element key="set_file_buffer" value="stream_set_write_buffer"/>
 				<element key="show_source" value="highlight_file"/>
 				<element key="sizeof" value="count"/>
+				<element key="socket_getopt" value="socket_get_option"/>
+				<element key="socket_setopt" value="socket_set_option"/>
+				<element key="srand" value="mt_srand"/>
 				<element key="strchr" value="strstr"/>
+				<element key="user_error" value="trigger_error"/>
 			</property>
 		</properties>
 	</rule>

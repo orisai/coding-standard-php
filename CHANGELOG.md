@@ -10,6 +10,36 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - New Composer keywords to suggest --dev during require
+- Forbidden function aliases:
+  - `diskfreespace()` -> `disk_free_space()`
+  - `ftp_quit` -> `ftp_close`
+  - `get_required_files` -> `get_included_files`
+  - `gzputs` -> `gzwrite`
+  - `ldap_close` -> `ldap_unbind`
+  - `ldap_modify` -> `ldap_mod_replace`
+  - `msgpack_pack` -> `msgpack_serialize`
+  - `msgpack_unpack` -> `msgpack_unserialize`
+  - `odbc_do` -> `odbc_exec`
+  - `odbc_field_precision` -> `odbc_field_len`
+  - `openssl_get_privatekey` -> `openssl_pkey_get_private`
+  - `openssl_get_publickey` -> `openssl_pkey_get_public`
+  - `imap_create` -> `imap_createmailbox`
+  - `imap_fetchtext` -> `imap_body`
+  - `imap_header` -> `imap_headerinfo`
+  - `imap_listmailbox` -> `imap_list`
+  - `imap_listsubscribed` -> `imap_lsub`
+  - `imap_rename` -> `imap_renamemailbox`
+  - `imap_scan` -> `imap_listscan`
+  - `imap_scanmailbox` -> `imap_listscan`
+  - `pcntl_errno` -> `pcntl_get_last_error`
+  - `posix_errno` -> `posix_get_last_error`
+  - `read_exif_data` -> `exif_read_data`
+  - `session_commit` -> `session_write_close`
+  - `set_file_buffer` -> `stream_set_write_buffer`
+  - `socket_getopt` -> `socket_get_option`
+  - `socket_setopt` -> `socket_set_option`
+  - `srand` -> `mt_srand`
+  - `user_error` -> `trigger_error`
 
 ### Removed
 
