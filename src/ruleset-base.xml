@@ -83,6 +83,7 @@
 	</rule>
 	<rule ref="SlevomatCodingStandard.Classes.DisallowMultiPropertyDefinition"/>
 	<rule ref="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants"/>
+	<rule ref="SlevomatCodingStandard.Classes.DisallowStringExpressionPropertyFetch"/>
 	<rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
 		<properties>
 			<property name="linesCountAfterOpeningBrace" value="1"/>
