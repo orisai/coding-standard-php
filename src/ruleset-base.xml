@@ -622,7 +622,6 @@
 			<property name="forbiddenFunctions" type="array">
 				<element key="chop" value="rtrim"/>
 				<element key="close" value="closedir"/>
-				<element key="delete" value="unset"/>
 				<element key="die" value="exit"/>
 				<element key="doubleval" value="floatval"/>
 				<element key="fputs" value="fwrite"/>

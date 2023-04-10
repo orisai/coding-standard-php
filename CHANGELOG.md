@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - New Composer keywords to suggest --dev during require
 
+### Removed
+
+- `delete()` as an alias of `unset()`, because it does not exist
+
 ## [3.4.0](https://github.com/orisai/coding-standard-php/compare/3.3.5...3.4.0) - 2023-03-28
 
 ### Added
