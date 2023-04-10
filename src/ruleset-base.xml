@@ -701,6 +701,7 @@
 		Strings
 	-->
 
+	<rule ref="SlevomatCodingStandard.Strings.DisallowVariableParsing"/>
 	<rule ref="Squiz.Strings.DoubleQuoteUsage">
 		<exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar"/>
 	</rule>

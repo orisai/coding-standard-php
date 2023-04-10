@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - `SlevomatCodingStandard.Classes.DisallowStringExpressionPropertyFetch` sniff
+- `SlevomatCodingStandard.Strings.DisallowVariableParsing` sniff
 - New Composer keywords to suggest --dev during require
 - Forbidden function aliases:
   - `diskfreespace()` -> `disk_free_space()`
