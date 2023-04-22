@@ -201,7 +201,7 @@
 		<!-- Superseded by SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectAnnotationsGroup -->
 		<exclude name="Squiz.Commenting.VariableComment.VarOrder"/>
 	</rule>
-
+	<rule ref="SlevomatCodingStandard.Commenting.AnnotationName"/>
 	<rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
 		<properties>
 			<property name="annotationsGroups" type="array">
