@@ -11,9 +11,7 @@ and [Slevomat Coding Standard](https://github.com/slevomat/coding-standard) rule
 	- [Suppress rule locally](#suppress-rule-locally)
 	- [Suppress rule in a path](#suppress-rule-in-a-path)
 	- [Suppress rule entirely](#suppress-rule-entirely)
-- [Potential errors](#potential-errors)
-	- [IDE compatibility](#ide-compatibility)
-	- [Code-breaking sniffs](#code-breaking-sniffs)
+- [Code-breaking sniffs](#code-breaking-sniffs)
 - [EditorConfig](#editorconfig)
 - [PhpStorm / IntelliJ IDEA](#phpstorm--intellij-idea)
 	- [Code style](#code-style)
@@ -166,49 +164,53 @@ Inside of the coding standard importing rule you can suppress the rules it impor
 
 ```xml
 <ruleset>
-	<rule ref="./vendor/orisai/coding-standard/src/ruleset-8.0.xml">
-		<exclude name="Name.Of.The.Sniff"/>
+	<rule ref="Namespace.Sniff">
+		<exclude name="Namespace.Sniff"/>
+		<!-- OR -->
+		<exclude name="Namespace.Sniff.SpecificError"/>
 	</rule>
 </ruleset>
 ```
 
-## Potential errors
+## Code-breaking sniffs
 
-### IDE compatibility
+These sniffs may break code due to incorrect phpdoc types or parent class/interface lacking native types.
 
-As we always use the newest features of each PHP version, ensure that your IDE is fully compatible with given PHP
-version.
-You may need to suppress some sniffs otherwise.
+If you are not ready to use them, just disable them entirely:
 
-We are using generics syntax for arrays instead array type hint syntax, some IDEs may not be compatible yet.
+```xml
+<ruleset>
+	<!-- Excluded because they are unsafe to auto-fix without tests or passing static analysis (e.g. PHPStan) -->
+	<rule ref="SlevomatCodingStandard">
+		<!-- Adds declare(strict_types=1) -->
+		<!-- Unsafe when code is not strict types compatible -->
+		<exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing"/>
 
-- e.g. `array<int>`, `array<array<bool>>` is used instead of `int[]`, `bool[][]`
-- Sniff `SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax`
-- Known compatible IDEs are:
-	- PHPStorm / IntelliJ IDEA - since 2020.3
+		<!-- Adds property type based on annotation typehint -->
+		<!-- Unsafe for overridden properties and properties with incorrect phpdoc type -->
+		<exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint"/>
 
-### Code-breaking sniffs
+		<!-- Adds function parameter type based on annotation typehint -->
+		<!-- Unsafe for overridden third-party methods and methods with incorrect parameter phpdoc type -->
+		<exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint"/>
 
-Sniffs listed bellow add typehints independently of whether it is allowed by inheritance rules or not.
+		<!-- Adds function return type based on annotation typehint -->
+		<!-- Unsafe for overridden third-party methods and methods with incorrect return phpdoc type -->
+		<exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint"/>
 
-`SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint`
+		<!-- Replaces inline phpdoc with assert() when possible -->
+		<!-- Unsafe with incorrect phpdoc types -->
+		<exclude name="SlevomatCodingStandard.PHP.RequireExplicitAssertion"/>
 
-- Adds function parameter type based on annotation typehint
-- In `slevomat/coding-standard < 6.0`
-  was `SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint`
+		<!-- Makes anonymous closures static when $this is not used inside them -->
+		<!-- May be unsafe if closure binding is used -->
+		<exclude name="SlevomatCodingStandard.Functions.StaticClosure"/>
+	</rule>
+</ruleset>
+```
 
-`SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint`
-
-- Adds function return type based on annotation typehint
-- In `slevomat/coding-standard < 6.0` was `SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingReturnTypeHint`
-
-`SlevomatCodingStandard.TypeHints.PropertyTypeHint`
-
-- Adds property type based on annotation typehint
-- php 7.4+
-
-It may lead to php errors which must be suppressed. These sniffs specifically can be suppressed with `@phpcsSuppress`
-annotation.
+Compatibility with specific untyped parent/interface properties, method parameters and method return types may be solved
+by local ignores:
 
 ```php
 class Example extends ClassNotDeclaringTheTypes
@@ -232,6 +234,15 @@ class Example extends ClassNotDeclaringTheTypes
 	}
 
 }
+```
+
+Closures using binding to an instance cannot be static and must be ignored by static closure sniff:
+
+```php
+// phpcs:disable SlevomatCodingStandard.Functions.StaticClosure
+(fn () => $object->$name = $value)
+	->bindTo($object, get_class($object))();
+// phpcs:enable
 ```
 
 ## EditorConfig
