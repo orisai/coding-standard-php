@@ -16,6 +16,7 @@
 	 	Arrays
 	-->
 
+	<rule ref="SlevomatCodingStandard.Arrays.ArrayAccess"/>
 	<rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
 	<rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation"/>
 	<rule ref="SlevomatCodingStandard.Arrays.MultiLineArrayEndBracketPlacement"/>
