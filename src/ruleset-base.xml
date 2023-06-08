@@ -755,6 +755,7 @@
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
+		<exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint"/>
 		<exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification"/>
 		<properties>
 			<property name="traversableTypeHints" type="array">

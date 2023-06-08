@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - superseded by optional `SlevomatCodingStandard.Files.TypeNameMatchesFileName` sniff
 - `Generic.PHP.DeprecatedFunctions`
   - use `phpstan/phpstan-deprecation-rules` instead
+- `SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint`
+  - use `phpstan/phpstan` instead
 
 ## [3.7.0](https://github.com/orisai/coding-standard-php/compare/3.6.0...3.7.0) - 2023-05-14
 
