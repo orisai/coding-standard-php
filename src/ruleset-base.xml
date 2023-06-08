@@ -616,7 +616,6 @@
 	<rule ref="Generic.PHP.LowerCaseType"/>
 	<rule ref="Squiz.PHP.InnerFunctions"/>
 	<rule ref="Squiz.PHP.LowercasePHPFunctions"/>
-	<rule ref="Generic.PHP.DeprecatedFunctions"/>
 	<rule ref="Generic.PHP.ForbiddenFunctions">
 		<properties>
 			<property name="forbiddenFunctions" type="array">
