@@ -181,29 +181,40 @@ If you are not ready to use them, just disable them entirely:
 ```xml
 <ruleset>
 	<!-- Excluded because they are unsafe to auto-fix without tests or passing static analysis (e.g. PHPStan) -->
-	<rule ref="SlevomatCodingStandard">
-		<!-- Adds declare(strict_types=1) -->
-		<!-- Unsafe when code is not strict types compatible -->
+
+	<!-- Adds declare(strict_types=1) -->
+	<!-- Unsafe when code is not strict types compatible -->
+	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing">
 		<exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing"/>
+	</rule>
 
-		<!-- Adds property type based on annotation typehint -->
-		<!-- Unsafe for overridden properties and properties with incorrect phpdoc type -->
+	<!-- Adds property type based on annotation typehint -->
+	<!-- Unsafe for overridden properties and properties with incorrect phpdoc type -->
+	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint">
 		<exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint"/>
+	</rule>
 
-		<!-- Adds function parameter type based on annotation typehint -->
-		<!-- Unsafe for overridden third-party methods and methods with incorrect parameter phpdoc type -->
+	<!-- Adds function parameter type based on annotation typehint -->
+	<!-- Unsafe for overridden third-party methods and methods with incorrect parameter phpdoc type -->
+	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint">
 		<exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint"/>
+	</rule>
 
-		<!-- Adds function return type based on annotation typehint -->
-		<!-- Unsafe for overridden third-party methods and methods with incorrect return phpdoc type -->
+	<!-- Adds function return type based on annotation typehint -->
+	<!-- Unsafe for overridden third-party methods and methods with incorrect return phpdoc type -->
+	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint">
 		<exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint"/>
+	</rule>
 
-		<!-- Replaces inline phpdoc with assert() when possible -->
-		<!-- Unsafe with incorrect phpdoc types -->
+	<!-- Replaces inline phpdoc with assert() when possible -->
+	<!-- Unsafe with incorrect phpdoc types -->
+	<rule ref="SlevomatCodingStandard.PHP.RequireExplicitAssertion">
 		<exclude name="SlevomatCodingStandard.PHP.RequireExplicitAssertion"/>
+	</rule>
 
-		<!-- Makes anonymous closures static when $this is not used inside them -->
-		<!-- May be unsafe if closure binding is used -->
+	<!-- Makes anonymous closures static when $this is not used inside them -->
+	<!-- May be unsafe if closure binding is used -->
+	<rule ref="SlevomatCodingStandard.Functions.StaticClosure">
 		<exclude name="SlevomatCodingStandard.Functions.StaticClosure"/>
 	</rule>
 </ruleset>
