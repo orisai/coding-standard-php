@@ -51,7 +51,6 @@
 	-->
 
 	<rule ref="Generic.Classes.DuplicateClassName"/>
-	<rule ref="PSR1.Classes.ClassDeclaration"/>
 	<rule ref="PEAR.Classes.ClassDeclaration"/>
 	<rule ref="Squiz.Classes.SelfMemberReference"/>
 	<rule ref="Squiz.Classes.ValidClassName"/>
