@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.7.1...HEAD)
 
+### Removed
+
+- `Squiz.Commenting.FunctionComment.MissingParamName`
+  - superseded by PHPStan
+
 ## [3.7.1](https://github.com/orisai/coding-standard-php/compare/3.7.0...3.7.1) - 2023-06-08
 
 ### Removed

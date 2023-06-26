@@ -184,6 +184,8 @@
 		<exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"/>
 		<!-- Reports standalone comments not related to a function -->
 		<exclude name="Squiz.Commenting.FunctionComment.WrongStyle"/>
+		<!-- Superseded by PHPStan -->
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamName"/>
 	</rule>
 	<rule ref="Squiz.Commenting.FunctionComment.ExtraParamComment">
 		<message>Function has more @param annotations than params</message>
