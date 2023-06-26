@@ -451,6 +451,7 @@
 			<property name="ignoreImports" value="true"/>
 		</properties>
 	</rule>
+	<rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName"/>
 
 	<!--
 		Formatting

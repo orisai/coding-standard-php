@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.7.1...HEAD)
 
+## Added
+
+- `SlevomatCodingStandard.Files.TypeNameMatchesFileName`
+	- just to ensure match between file and (non fully qualified) class name
+	- it can still be overridden by custom settings
+
 ### Removed
 
 - `Squiz.Commenting.FunctionComment.MissingParamName`
