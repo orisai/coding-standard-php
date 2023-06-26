@@ -10,7 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 
 - `Squiz.Commenting.FunctionComment.MissingParamName`
-  - superseded by PHPStan
+	- superseded by PHPStan
+- `SlevomatCodingStandard.ControlStructures.DisallowShortTernaryOperator`
+	- superseded by PHPStan
 
 ## [3.7.1](https://github.com/orisai/coding-standard-php/compare/3.7.0...3.7.1) - 2023-06-08
 

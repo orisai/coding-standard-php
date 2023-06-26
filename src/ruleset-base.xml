@@ -399,11 +399,6 @@
 		</properties>
 	</rule>
 	<rule ref="SlevomatCodingStandard.ControlStructures.DisallowContinueWithoutIntegerOperandInSwitch"/>
-	<rule ref="SlevomatCodingStandard.ControlStructures.DisallowShortTernaryOperator">
-		<properties>
-			<property name="fixable" value="false"/>
-		</properties>
-	</rule>
 	<rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
 	<rule ref="SlevomatCodingStandard.ControlStructures.LanguageConstructWithParentheses"/>
 	<rule ref="SlevomatCodingStandard.ControlStructures.NewWithParentheses"/>
