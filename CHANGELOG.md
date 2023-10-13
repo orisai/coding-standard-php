@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `Generic.VersionControl.GitMergeConflict`
 	- checks whether unresolved git conflict is in the file
 
+### Changed
+
+- `slevomat/coding-standard` upgraded to `^8.14.0`
+
 ## [3.8.0](https://github.com/orisai/coding-standard-php/compare/3.7.1...3.8.0) - 2023-06-26
 
 ### Added
