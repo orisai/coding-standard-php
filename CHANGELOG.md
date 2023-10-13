@@ -7,9 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.8.0...HEAD)
 
+### Added
+
+- `Generic.VersionControl.GitMergeConflict`
+	- checks whether unresolved git conflict is in the file
+
 ## [3.8.0](https://github.com/orisai/coding-standard-php/compare/3.7.1...3.8.0) - 2023-06-26
 
-## Added
+### Added
 
 - `SlevomatCodingStandard.Files.TypeNameMatchesFileName`
 	- just to ensure match between file and (non fully qualified) class name

@@ -784,6 +784,12 @@
 	<rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
 
 	<!--
+		Version control
+	-->
+
+	<rule ref="Generic.VersionControl.GitMergeConflict"/>
+
+	<!--
 	 	Whitespace
 	-->
 
