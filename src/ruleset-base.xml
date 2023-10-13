@@ -485,6 +485,7 @@
 	<rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
 	<rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
 	<rule ref="SlevomatCodingStandard.Functions.DisallowEmptyFunction"/>
+	<rule ref="SlevomatCodingStandard.Functions.NamedArgumentSpacing"/>
 	<rule ref="SlevomatCodingStandard.Functions.RequireMultiLineCall">
 		<properties>
 			<property name="minLineLength" value="121"/>

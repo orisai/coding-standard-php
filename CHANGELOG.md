@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - `Generic.VersionControl.GitMergeConflict`
 	- checks whether unresolved git conflict is in the file
+- `SlevomatCodingStandard.Functions.NamedArgumentSpacing`
+	- checks spacing in named argument
 
 ### Changed
 
