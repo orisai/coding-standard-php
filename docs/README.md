@@ -217,6 +217,12 @@ If you are not ready to use them, just disable them entirely:
 	<rule ref="SlevomatCodingStandard.Functions.StaticClosure">
 		<exclude name="SlevomatCodingStandard.Functions.StaticClosure"/>
 	</rule>
+
+	<!-- Causes changes in what PHPStan reports because PHPStan treats short and generic array syntax differently -->
+	<!-- User[]|ICollection (iterable ICollection of User) -> array<User>|ICollection (union) -->
+	<rule ref="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax">
+		<exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax"/>
+	</rule>
 </ruleset>
 ```
 
