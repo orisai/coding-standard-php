@@ -387,7 +387,7 @@
 			<property name="linesCountAfterLast" value="0"/>
 			<property name="linesCountAfterWhenLastInCaseOrDefault" value="null"/>
 			<property name="linesCountAfterWhenLastInLastCaseOrDefault" value="null"/>
-			<property name="controlStructures" type="array">
+			<property name="jumpStatements" type="array">
 				<element value="goto"/>
 				<element value="break"/>
 				<element value="continue"/>

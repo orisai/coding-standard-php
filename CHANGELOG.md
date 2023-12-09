@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.9.0...HEAD)
 
+### Fixed
+
+- `JumpStatements` property `controlStructures` renamed to `jumpStatements`
+	- Fixes `ERROR: Ruleset invalid. Property "controlStructures" does not exist on sniff SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing`
+
 ## [3.9.0](https://github.com/orisai/coding-standard-php/compare/3.8.0...3.9.0) - 2023-10-14
 
 ### Added
