@@ -49,7 +49,7 @@ and [Slevomat Coding Standard](https://github.com/slevomat/coding-standard) rule
 	</ruleset>
 	```
 4. Replace `<VERSION>` with minimal php version you want to support
-	- supported are `7.2`, `7.3`, `7.4`, `8.0`, `8.1`
+	- supported are `7.2`, `7.3`, `7.4`, `8.0`, `8.1`, `8.2`, `8.3`
 5. Replace `<NAMESPACE>` with your root namespace
 	- by default expected code directory is `src` and tests directory is `tests` with `Tests` namespace prefix
 6. Create directory for temp files

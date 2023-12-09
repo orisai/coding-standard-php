@@ -1,0 +1,55 @@
+<ruleset
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="./../vendor/squizlabs/php_codesniffer/phpcs.xsd">
+	<!-- Configure ruleset -->
+	<config name="php_version" value="80200"/>
+
+	<!-- Import base -->
+	<rule ref="./ruleset-base.xml"/>
+
+	<!-- Version-specific rules -->
+	<!-- - since 7.3 -->
+	<rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall"/>
+	<rule ref="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall">
+		<properties>
+			<property name="onlySingleLine" value="true"/>
+		</properties>
+	</rule>
+	<!-- - since 7.4 -->
+	<rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceEqualOperator"/>
+	<rule ref="SlevomatCodingStandard.Functions.RequireArrowFunction"/>
+	<rule ref="SlevomatCodingStandard.Functions.ArrowFunctionDeclaration">
+		<properties>
+			<property name="allowMultiLine" value="true"/>
+			<property name="spacesCountAfterKeyword" value="1"/>
+			<property name="spacesCountBeforeArrow" value="1"/>
+			<property name="spacesCountAfterArrow" value="1"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Numbers.RequireNumericLiteralSeparator"/>
+	<!-- - since 8.0 -->
+	<rule ref="SlevomatCodingStandard.Attributes.AttributeAndTargetSpacing"/>
+	<rule ref="SlevomatCodingStandard.Attributes.DisallowAttributesJoining"/>
+	<rule ref="SlevomatCodingStandard.Attributes.DisallowMultipleAttributesPerLine"/>
+	<rule ref="SlevomatCodingStandard.Attributes.RequireAttributeAfterDocComment"/>
+	<rule ref="SlevomatCodingStandard.Classes.RequireConstructorPropertyPromotion"/>
+	<rule ref="SlevomatCodingStandard.ControlStructures.RequireNullSafeObjectOperator"/>
+	<rule ref="SlevomatCodingStandard.Exceptions.RequireNonCapturingCatch"/>
+	<rule ref="SlevomatCodingStandard.Functions.DisallowTrailingCommaInDeclaration">
+		<properties>
+			<property name="onlySingleLine" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInClosureUse"/>
+	<rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration"/>
+	<rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
+		<properties>
+			<property name="withSpaces" value="no"/>
+			<property name="shortNullable" value="no"/>
+			<property name="nullPosition" value="last"/>
+		</properties>
+	</rule>
+	<!-- - since 8.1 -->
+	<!-- - since 8.2 -->
+
+</ruleset>
