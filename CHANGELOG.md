@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Support for PHP 8.3
 - Rulesets for PHP 8.2 and 8.3
 
 ### Changed
