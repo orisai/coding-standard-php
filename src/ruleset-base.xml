@@ -166,6 +166,7 @@
 		<exclude name="Squiz.Commenting.FunctionComment.IncorrectParamVarName"/>
 		<!-- Comments are not required -->
 		<exclude name="Squiz.Commenting.FunctionComment.Missing"/>
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamType"/> <!-- Superseded by PHPStan -->
 		<exclude name="Squiz.Commenting.FunctionComment.MissingReturn"/>
 		<exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"/>
 		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag"/>
