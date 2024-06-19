@@ -18,7 +18,6 @@
 
 	<rule ref="SlevomatCodingStandard.Arrays.ArrayAccess"/>
 	<rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
-	<rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation"/>
 	<rule ref="SlevomatCodingStandard.Arrays.MultiLineArrayEndBracketPlacement"/>
 	<rule ref="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace"/>
 	<rule ref="Generic.Arrays.ArrayIndent">

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.10.1...HEAD)
 
+### Removed
+
+- `SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation` - superseded by PHPStan (strict rules)
+
 ## [3.10.1](https://github.com/orisai/coding-standard-php/compare/3.10.0...3.10.1) - 2024-02-20
 
 ### Removed
