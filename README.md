@@ -18,15 +18,9 @@
 </p>
 
 <p align="center">
-	<a href="https://packagist.org/packages/orisai/coding-standard">
-		<img src="https://badgen.net/packagist/dt/orisai/coding-standard?cache=3600">
-	</a>
-	<a href="https://packagist.org/packages/orisai/coding-standard">
-		<img src="https://badgen.net/packagist/v/orisai/coding-standard?cache=3600">
-	</a>
-	<a href="https://choosealicense.com/licenses/mpl-2.0/">
-		<img src="https://badgen.net/badge/license/MPL-2.0/blue?cache=3600">
-	</a>
+	<a href="https://packagist.org/packages/orisai/coding-standard"><img src="https://badgen.net/packagist/dt/orisai/coding-standard?cache=3600"></a>
+	<a href="https://packagist.org/packages/orisai/coding-standard"><img src="https://badgen.net/packagist/v/orisai/coding-standard?cache=3600"></a>
+	<a href="https://choosealicense.com/licenses/mpl-2.0/"><img src="https://badgen.net/badge/license/MPL-2.0/blue?cache=3600"></a>
 <p>
 
 ##
