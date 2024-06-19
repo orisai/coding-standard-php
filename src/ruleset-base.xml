@@ -186,6 +186,7 @@
 		<exclude name="Squiz.Commenting.FunctionComment.WrongStyle"/>
 		<!-- Superseded by PHPStan -->
 		<exclude name="Squiz.Commenting.FunctionComment.MissingParamName"/>
+		<exclude name="Squiz.Commenting.FunctionComment.InvalidReturnVoid"/>
 	</rule>
 	<rule ref="Squiz.Commenting.FunctionComment.ExtraParamComment">
 		<message>Function has more @param annotations than params</message>
