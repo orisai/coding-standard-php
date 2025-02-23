@@ -383,11 +383,11 @@
 			<property name="allowSingleLineYieldStacking" value="true"/>
 			<property name="linesCountBefore" value="1"/>
 			<property name="linesCountBeforeFirst" value="0"/>
-			<property name="linesCountBeforeWhenFirstInCaseOrDefault" value="null"/>
+			<property name="linesCountBeforeWhenFirstInCaseOrDefault" value="0"/>
 			<property name="linesCountAfter" value="1"/>
 			<property name="linesCountAfterLast" value="0"/>
-			<property name="linesCountAfterWhenLastInCaseOrDefault" value="null"/>
-			<property name="linesCountAfterWhenLastInLastCaseOrDefault" value="null"/>
+			<property name="linesCountAfterWhenLastInCaseOrDefault" value="0"/>
+			<property name="linesCountAfterWhenLastInLastCaseOrDefault" value="0"/>
 			<property name="jumpStatements" type="array">
 				<element value="goto"/>
 				<element value="break"/>
