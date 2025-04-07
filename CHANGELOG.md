@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.10.3...v3.x)
 
+### Changed
+
+- `slevomat/coding-standard` upgraded to `^8.16.0`
+
 ### Removed
 
 - Support for PHP 7.2 and 7.3 (rulesets are still available for BC)
