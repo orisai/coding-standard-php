@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - `slevomat/coding-standard` upgraded to `^8.16.0`
+- Replaced `SlevomatCodingStandard.TypeHints.UnionTypeHintFormat` sniff with
+  `SlevomatCodingStandard.TypeHints.DNFTypeHintFormat` sniff
 
 ### Removed
 
