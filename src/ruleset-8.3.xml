@@ -53,5 +53,6 @@
 	<!-- - since 8.1 -->
 	<!-- - since 8.2 -->
 	<!-- - since 8.3 -->
+	<rule ref="SlevomatCodingStandard.TypeHints.ClassConstantTypeHint"/>
 
 </ruleset>

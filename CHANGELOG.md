@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.10.3...v3.x)
 
+### Added
+
+- `SlevomatCodingStandard.TypeHints.ClassConstantTypeHint` sniff
+	- require typed class constants on PHP 8.3+
+
 ### Changed
 
 - `slevomat/coding-standard` upgraded to `^8.16.0`
