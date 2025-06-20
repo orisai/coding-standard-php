@@ -185,43 +185,43 @@ If you are not ready to use them, just disable them entirely:
 	<!-- Adds declare(strict_types=1) -->
 	<!-- Unsafe when code is not strict types compatible -->
 	<rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing">
-		<exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing"/>
+		<exclude-pattern>*</exclude-pattern>
 	</rule>
 
 	<!-- Adds property type based on annotation typehint -->
 	<!-- Unsafe for overridden properties and properties with incorrect phpdoc type -->
 	<rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint">
-		<exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint"/>
+		<exclude-pattern>*</exclude-pattern>
 	</rule>
 
 	<!-- Adds function parameter type based on annotation typehint -->
 	<!-- Unsafe for overridden third-party methods and methods with incorrect parameter phpdoc type -->
 	<rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint">
-		<exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint"/>
+		<exclude-pattern>*</exclude-pattern>
 	</rule>
 
 	<!-- Adds function return type based on annotation typehint -->
 	<!-- Unsafe for overridden third-party methods and methods with incorrect return phpdoc type -->
 	<rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint">
-		<exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint"/>
+		<exclude-pattern>*</exclude-pattern>
 	</rule>
 
 	<!-- Replaces inline phpdoc with assert() when possible -->
 	<!-- Unsafe with incorrect phpdoc types -->
 	<rule ref="SlevomatCodingStandard.PHP.RequireExplicitAssertion">
-		<exclude name="SlevomatCodingStandard.PHP.RequireExplicitAssertion"/>
+		<exclude-pattern>*</exclude-pattern>
 	</rule>
 
 	<!-- Makes anonymous closures static when $this is not used inside them -->
 	<!-- May be unsafe if closure binding is used -->
 	<rule ref="SlevomatCodingStandard.Functions.StaticClosure">
-		<exclude name="SlevomatCodingStandard.Functions.StaticClosure"/>
+		<exclude-pattern>*</exclude-pattern>
 	</rule>
 
 	<!-- Causes changes in what PHPStan reports because PHPStan treats short and generic array syntax differently -->
 	<!-- User[]|ICollection (iterable ICollection of User) -> array<User>|ICollection (union) -->
 	<rule ref="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax">
-		<exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax"/>
+		<exclude-pattern>*</exclude-pattern>
 	</rule>
 </ruleset>
 ```
