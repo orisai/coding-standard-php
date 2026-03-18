@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-    PHP coding standard built on top of <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>
+    PHP coding standard built on top of <a href="https://github.com/PHPCSStandards/PHP_CodeSniffer">PHP_CodeSniffer</a>
     and <a href="https://github.com/slevomat/coding-standard">Slevomat Coding Standard</a> rules.
 </p>
 

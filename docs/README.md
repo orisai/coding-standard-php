@@ -1,6 +1,6 @@
 # Coding Standard - PHP
 
-PHP coding standard built on top of [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+PHP coding standard built on top of [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer)
 and [Slevomat Coding Standard](https://github.com/slevomat/coding-standard) rules.
 
 ## Content
@@ -123,7 +123,7 @@ echo 'some php code';
 ```
 
 Learn more in
-[PHP_CodeSniffer docs](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-parts-of-a-file)
+[PHP_CodeSniffer docs](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-parts-of-a-file)
 
 ### Suppress rule in a path
 
@@ -150,7 +150,7 @@ The `<exclude-pattern>` is treated like a regular expression
 - ensure that `.` (`.php`) is escaped (`\.php`)
 - `*` is converted to `.*`
 - learn more in
-  [PHP_CodeSniffer docs](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-files-and-folders)
+  [PHP_CodeSniffer docs](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-files-and-folders)
 
 ```xml
 <ruleset>
