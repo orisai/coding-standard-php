@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/coding-standard-php/compare/3.11.0...v3.x)
 
+### Added
+
+- Support for PHP 8.5 and 8.6
+
 ## [3.11.0](https://github.com/orisai/coding-standard-php/compare/3.10.3...3.11.0) - 2025-04-07
 
 ### Added
